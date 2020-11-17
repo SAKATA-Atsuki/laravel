@@ -14,7 +14,7 @@ class MemberRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == route('join'))
+        if ($this->path() == 'join')
         {
             return true;
         } else {
