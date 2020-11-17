@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// join
+Route::get('join', 'MemberController@getIndex');
+Route::post('join', 'MemberController@postIndex');
+Route::get('join/check', 'MemberController@check');

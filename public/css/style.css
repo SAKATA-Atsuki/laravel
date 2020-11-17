@@ -1,0 +1,1225 @@
+body {
+    background-color: rgb(221, 234, 247);
+}
+
+/* join/index.php -------------------------------------------------- */
+
+#body-join {
+    width: 430px;
+    margin: 0 auto;
+}
+
+#head {
+    text-align: center;
+    font-size: 25px;
+}
+
+#content {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.name_sei {
+    margin: 0 10px;
+}
+
+.name_mei {
+    margin: 0 10px;
+}
+
+.nickname {
+    margin-left: 30px;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}
+
+.gender {
+    margin-top: 20px;
+}
+
+.gender_gender {
+    margin-right: 40px;
+}
+
+.password1 {
+    margin-left: 50px;
+}
+
+.password2 {
+    margin-left: 10px;
+}
+
+.email {
+    margin-left: 12px;
+}
+
+.button-index-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 70px;
+    border-radius: 10px;
+    margin-left: 85px;
+    margin-bottom: 35px;
+}
+
+.button-index-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    margin-left: 85px;
+    text-decoration: none;
+}
+
+.button-check-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    margin-left: 85px;
+    margin-bottom: 35px;
+}
+
+.button-check-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 81.5px;
+    border-radius: 10px;
+    margin-left: 85px;
+    text-decoration: none;
+}
+
+.button-complete {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    margin-left: 85px;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.width-left-join {
+    width: 160px;
+}
+
+.width-right-join {
+    width: 270px;
+}
+
+.complete-head {
+    margin-top: 100px;
+}
+
+.complete-content {
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 200px;
+}
+
+#top-head-1 {
+    margin: -8px;
+    background-color: rgb(253, 227, 214);
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#top-head-2 {
+    margin: -8px;
+    background-color: rgb(253, 227, 214);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button-top-left-1 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.button-top-center-1 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.button-top-right-1 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 12px;
+    margin-right: 20px;
+}
+
+.button-top-left-2 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.button-top-center-2 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.button-top-right-2 {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 26px;
+    text-decoration: none;
+    margin-left: 12px;
+    margin-right: 20px;
+}
+
+.welcome {
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.title {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    padding: 150px 0;
+}
+
+#top-bottom {
+    background-color: rgb(253, 227, 214);
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.button-top-bottom {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#body-login {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.email-login {
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.password-login {
+    margin-left: 110px;
+}
+
+.button-login-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    margin-left: 158px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.button-login-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    margin-left: 158px;
+    text-decoration: none;
+}
+
+#body-thread {
+    width: 530px;
+    margin: 0 auto;
+}
+
+.comment_index {
+    margin-left: 86.5px;
+    margin-top: -45px;
+}
+
+.button-thread-index-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 70px;
+    border-radius: 10px;
+    margin-left: 135px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.button-thread-index-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 70px;
+    border-radius: 10px;
+    margin-left: 135px;
+    text-decoration: none;
+}
+
+.width-left-thread {
+    width: 190px;
+}
+
+.width-right-thread {
+    width: 340px;
+}
+
+.button-thread-check-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 23.5px;
+    border-radius: 10px;
+    margin-left: 135px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.button-thread-check-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 81.5px;
+    border-radius: 10px;
+    margin-left: 135px;
+    text-decoration: none;
+}
+
+.blank-top-list {
+    height: 1px;
+}
+
+.button-top-list {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#list {
+    width: 655px;
+    margin: 45px auto;
+}
+
+.search {
+    height: 40px;
+}
+
+.button-search {
+    color: black;
+    border: solid 2px black;
+    background-color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+.list {
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+
+.left-list {
+    display: block;
+    width: 70px;
+    text-decoration: none;
+    color: rgb(2, 66, 226);
+}
+
+.center-list {
+    display: block;
+    width: 250px;
+    text-decoration: none;
+    color: rgb(2, 66, 226);
+}
+
+.right-list {
+    display: block;
+    width: 180px;
+    text-decoration: none;
+    color: rgb(2, 66, 226);
+}
+
+.button-thread-list {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    margin-left: 195px;
+    text-decoration: none;
+}
+
+.button-top-detail {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#detail {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.detail_title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.under_detail_title {
+    line-height: 0;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.count_comment {
+    text-align: center;
+}
+
+.detail_created_at {
+    text-align: right;
+    margin-top: -16px;
+}
+
+.bar {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin: 0 -8px;
+}
+
+.button_comment_prev_on {
+    color: rgb(1, 31, 97);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button_comment_prev_off {
+    color: rgb(128, 127, 127);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button_comment_next_on {
+    color: rgb(1, 31, 97);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button_comment_next_off {
+    color: rgb(128, 127, 127);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.detail_main {
+    color: rgb(4, 65, 227);
+    border: solid 2px rgb(4, 65, 227);
+    border-radius: 25px;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.detail_main_top {
+    margin-bottom: 0;
+}
+
+.detail_main_bottom {
+    margin-top: 0;
+}
+
+.detail_comment {
+    padding: 0 20px;
+}
+
+.detail_comment_top {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.detail_comment_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.detail_comment_bottom_left {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.detail_comment_bottom_right {
+    margin-right: 100px;
+}
+
+.detail_comment_bottom_right_on {
+    color: red;
+}
+
+.detail_comment_bottom_right_off {
+    color: black;
+}
+
+.comment_list {
+    border-bottom: solid 1px rgb(192, 191, 191);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.comment_detail {
+    margin: 15px 15px 0 15px;
+}
+
+.button-detail {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 18px;
+    border-radius: 10px;
+    margin-left: 503px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button-leave-top {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 45px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#leave {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#content-leave {
+    font-size: 20px;
+    margin: 50px 0;
+}
+
+.button-leave-bottom {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* admin/login.php -------------------------------------------------- */
+
+.admin-login-header {
+    margin: -8px;
+    background-color: rgb(217, 217, 217);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.admin-login-main {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.admin-login-main-top {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.admin-login-main-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    text-align: center;
+}
+
+.admin-login-button {
+    color: white;
+    background-color: rgb(48, 85, 152);
+    border-color: rgb(48, 85, 152);
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 5px 40px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.admin-login-footer {
+    background-color: rgb(217, 217, 217);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* admin/index.php -------------------------------------------------- */
+
+.admin-index-header {
+    margin: -8px;
+    background-color: rgb(217, 217, 217);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.admin-welcome {
+    font-size: 20px;
+}
+
+.admin-index-header-button {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.admin-index-main {
+    margin-top: 80px;
+}
+
+.admin-index-main-member {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 80px;
+    border-radius: 10px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+/* admin/member.php -------------------------------------------------- */
+
+.admin-member-header-button {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.admin-member-main {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.admin-member-main-join {
+    width: 520px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.admin-member-main-join-button {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.admin-member-main-search {
+    margin-bottom: 15px;
+}
+
+.admin-member-main-search-1 {
+    display: flex;
+    height: 50px;
+    width: 520px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-member-main-search-1-left {
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    width: 120px;
+    padding-top: 14px;
+    padding-left: 5px;
+    border-right: solid 1px black;
+}
+
+.admin-member-main-search-1-right {
+    width: 400px;
+}
+
+.admin-member-main-search-1-right-id {
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 50px;
+}
+
+.admin-member-main-search-2 {
+    display: flex;
+    height: 50px;
+    width: 520px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-member-main-search-2-left {
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    width: 120px;
+    padding-top: 14px;
+    padding-left: 5px;
+    border-right: solid 1px black;
+}
+
+.admin-member-main-search-2-right {
+    width: 400px;
+}
+
+.admin-member-main-search-2-right-1 {
+    margin-top: 18px;
+    margin-left: 50px;
+}
+
+.admin-member-main-search-2-right-2 {
+    margin-top: 18px;
+    margin-left: 25px;
+}
+
+.admin-member-main-search-3 {
+    display: flex;
+    height: 50px;
+    width: 520px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-member-main-search-3-left {
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    width: 120px;
+    padding-top: 14px;
+    padding-left: 5px;
+    border-right: solid 1px black;
+}
+
+.admin-member-main-search-3-right {
+    width: 400px;
+}
+
+.admin-member-main-search-3-right-pref {
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.admin-member-main-search-4 {
+    display: flex;
+    height: 50px;
+    width: 520px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.admin-member-main-search-4-left {
+    background-color: rgb(217, 217, 217);
+    font-weight: bold;
+    width: 120px;
+    padding-top: 14px;
+    padding-left: 5px;
+    border-right: solid 1px black;
+}
+
+.admin-member-main-search-4-right {
+    width: 400px;
+}
+
+.admin-member-main-search-4-right-free {
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 50px;
+}
+
+.admin-member-main-search-button {
+    color: rgb(68, 114, 196);
+    background-color: white;
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.admin-member-main-result {
+    margin-top: 15px;
+}
+
+.admin-member-main-result-top {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-member-main-result-top-id {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-name {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 250px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-gender {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-adress {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 250px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-created_at {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 200px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-edit {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-top-detail {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+}
+
+.far {
+    color: black;
+}
+
+.admin-member-main-result-main {
+    background-color: white;
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: dotted 1px black;
+}
+
+.admin-member-main-result-main-id {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-name {
+    text-align: center;
+    width: 250px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-gender {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-adress {
+    text-align: center;
+    width: 250px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-created_at {
+    text-align: center;
+    width: 200px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-edit {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-main-detail {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+}
+
+.admin-member-main-result-bottom {
+    background-color: white;
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.admin-member-main-result-bottom-id {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-name {
+    text-align: center;
+    width: 250px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-gender {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-adress {
+    text-align: center;
+    width: 250px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-created_at {
+    text-align: center;
+    width: 200px;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-edit {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-member-main-result-bottom-detail {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+}
+
+.admin-member-main-page {
+    display: flex;
+    justify-content: flex-end;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-right: 80px;
+}
+
+.admin-member-main-page-left-off {
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+.admin-member-main-page-left-on {
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.admin-member-main-page-center {
+    width: 25px;
+    height: 25px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    color: white;
+    background-color: rgb(117, 113, 113);
+    text-align: center;
+}
+
+.admin-member-main-page-right-off {
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+.admin-member-main-page-right-on {
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.admin-member-main-page-prev {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+}
+
+.admin-member-main-page-next {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-left: 20px;
+}
+
+/* admin/join.php -------------------------------------------------- */
+
+.admin-join-header-button {
+    color: black;
+    border: solid 2px black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.admin-join-main {
+    width: 430px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.admin-join-main-id {
+    margin-left: 29.5px;
+}
+
+.admin-join-main-button {
+    color: rgb(68, 114, 196);
+    background-color: white;
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 45px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* admin/check_join.php -------------------------------------------------- */
+
+.admin-check-main {
+    width: 430px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.admin-check-button {
+    color: rgb(68, 114, 196);
+    background-color: white;
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 55px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* admin/detail.php -------------------------------------------------- */
+
+.admin-detail-button {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.admin-detail-button-left {
+    color: rgb(68, 114, 196);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 70px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.admin-detail-button-right {
+    color: rgb(68, 114, 196);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 70px;
+    border-radius: 10px;
+    text-decoration: none;
+}
