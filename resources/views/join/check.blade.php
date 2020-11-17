@@ -14,20 +14,18 @@
     <div id="content">
         <div class="flex">
             <p class="width-left-join">氏名</p>
-            <p class="width-right-join">{{ $name_sei }}　{{ $name_mei }}</p>
+            <p class="width-right-join">{{ $session_join['name_sei'] }}　{{ $session_join['name_mei'] }}</p>
         </div>
         <div class="flex">
             <p class="width-left-join">ニックネーム</p>
-            <p class="width-right-join">{{ $nickname }}</p>
+            <p class="width-right-join">{{ $session_join['nickname'] }}</p>
         </div>
         <div class="flex">
             <p class="width-left-join">性別</p>
             <p class="width-right-join">
-                @if ($gender === '1')
-                    男性
-                @else
-                    女性
-                @endif
+                @foreach (config('master.gender') as $index => $value)
+                    @if ($session_join['gender'] == $index) {{ $value }} @endif
+                @endforeach
             </p>
         </div>
         <div class="flex">
@@ -36,13 +34,14 @@
         </div>
         <div class="flex">
             <p class="width-left-join">メールアドレス</p>
-            <p class="width-right-join">{{ $email }}</p>
+            <p class="width-right-join">{{ $session_join['email'] }}</p>
         </div>
-        <form action="" method="POST">
+        <form action="{{ route('join.store') }}" method="POST">
+            @csrf
             <input type="hidden" name="action" value="submit">
             <input type="submit" value="登録完了" class="button-check-1">
             <br>
-            <a href="index.php?action=rewrite" class="button-check-2">前に戻る</a>
+            <a href="../join?action=rewrite" class="button-check-2">前に戻る</a>
         </form>
     </div>
 </body>

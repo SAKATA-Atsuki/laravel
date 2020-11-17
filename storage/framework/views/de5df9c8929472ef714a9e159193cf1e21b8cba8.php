@@ -14,20 +14,18 @@
     <div id="content">
         <div class="flex">
             <p class="width-left-join">氏名</p>
-            <p class="width-right-join"><?php echo e($name_sei); ?>　<?php echo e($name_mei); ?></p>
+            <p class="width-right-join"><?php echo e($session_join['name_sei']); ?>　<?php echo e($session_join['name_mei']); ?></p>
         </div>
         <div class="flex">
             <p class="width-left-join">ニックネーム</p>
-            <p class="width-right-join"><?php echo e($nickname); ?></p>
+            <p class="width-right-join"><?php echo e($session_join['nickname']); ?></p>
         </div>
         <div class="flex">
             <p class="width-left-join">性別</p>
             <p class="width-right-join">
-                <?php if($gender === '1'): ?>
-                    男性
-                <?php else: ?>
-                    女性
-                <?php endif; ?>
+                <?php $__currentLoopData = config('master.gender'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if($session_join['gender'] == $index): ?> <?php echo e($value); ?> <?php endif; ?>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>
         <div class="flex">
@@ -36,13 +34,14 @@
         </div>
         <div class="flex">
             <p class="width-left-join">メールアドレス</p>
-            <p class="width-right-join"><?php echo e($email); ?></p>
+            <p class="width-right-join"><?php echo e($session_join['email']); ?></p>
         </div>
-        <form action="" method="POST">
+        <form action="<?php echo e(route('join.store')); ?>" method="POST">
+            <?php echo csrf_field(); ?>
             <input type="hidden" name="action" value="submit">
             <input type="submit" value="登録完了" class="button-check-1">
             <br>
-            <a href="index.php?action=rewrite" class="button-check-2">前に戻る</a>
+            <a href="../join?action=rewrite" class="button-check-2">前に戻る</a>
         </form>
     </div>
 </body>

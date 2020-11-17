@@ -20,6 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // join
-Route::get('join', 'MemberController@getIndex');
-Route::post('join', 'MemberController@postIndex');
-Route::get('join/check', 'MemberController@check');
+Route::get('join', 'MemberController@getIndex')->name('join');
+Route::post('join', 'MemberController@postIndex')->name('join');
+Route::get('join/check', 'MemberController@check')->name('join.check');
+Route::post('join/store', 'MemberController@store')->name('join.store');
+Route::get('join/complete', 'MemberController@complete')->name('join.complete');
