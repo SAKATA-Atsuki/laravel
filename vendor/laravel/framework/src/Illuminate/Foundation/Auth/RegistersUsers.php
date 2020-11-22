@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use App\Http\Requests\MemberRequest;
 use Illuminate\Support\Facades\Auth;
 
 trait RegistersUsers
@@ -26,16 +27,39 @@ trait RegistersUsers
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)
+    public function register(MemberRequest $request)
     {
-        $this->validator($request->all())->validate();
+        $request->session()->put('register', $request->all());
+        return redirect()->route('register.check');
+    }
 
-        event(new Registered($user = $this->create($request->all())));
+    public function check(Request $request)
+    {
+        $session_register = $request->session()->get('register');
+        return view('auth.check', compact('session_register'));
+    }
 
-        $this->guard()->login($user);
+    public function store(Request $request)
+    {
+        $session_register = $request->session()->get('register');
 
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+        if ($request->has('back'))
+        {
+            return redirect()->route('register')->withInput($session_register);
+        } else {
+            event(new Registered($user = $this->create($session_register))); // DBに保存
+            return redirect()->route('register.complete');    
+        }
+
+        // $this->guard()->login($user);
+
+        // return $this->registered($request, $user)
+        //                 ?: redirect($this->redirectPath());
+    }
+
+    public function complete()
+    {
+        return view('auth.complete');
     }
 
     /**

@@ -1160,6 +1160,10 @@ class Router implements BindingRegistrar, RegistrarContract
             $this->post('register', 'Auth\RegisterController@register');
         }
 
+        $this->get('register/check', 'Auth\RegisterController@check')->name('register.check');
+        $this->post('register/store', 'Auth\RegisterController@store')->name('register.store');
+        $this->get('register/complete', 'Auth\RegisterController@complete')->name('register.complete');
+
         // Password Reset Routes...
         if ($options['reset'] ?? true) {
             $this->resetPassword();

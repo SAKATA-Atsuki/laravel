@@ -2,7 +2,7 @@ body {
     background-color: rgb(255, 242, 204);
 }
 
-/* join/index.php -------------------------------------------------- */
+/* auth/register.php -------------------------------------------------- */
 
 #body-join {
     width: 430px;
@@ -84,9 +84,11 @@ body {
     text-decoration: none;
 }
 
-/* join/check.php -------------------------------------------------- */
+/* auth/check.php -------------------------------------------------- */
 
 .button-check-1 {
+    outline: none;
+    background: none;
     color: white;
     background-color: rgb(237, 125, 50);
     border-color: rgb(237, 125, 50);
@@ -100,13 +102,15 @@ body {
 }
 
 .button-check-2 {
+    outline: none;
+    background: none;
     color: rgb(237, 125, 50);
     background-color: white;
     border: solid 2px rgb(237, 125, 50);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 15px 81.5px;
+    padding: 9px 81.5px;
     border-radius: 10px;
     margin-left: 85px;
     text-decoration: none;
