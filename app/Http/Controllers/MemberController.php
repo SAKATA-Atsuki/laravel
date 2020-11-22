@@ -50,7 +50,7 @@ class MemberController extends Controller
         return redirect()->route('join.complete');
     }
 
-    public function complete(Request $request)
+    public function complete()
     {
         return view('join.complete');
     }

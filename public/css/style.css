@@ -57,6 +57,8 @@ body {
 }
 
 .button-index-1 {
+    outline: none;
+    background: none;
     color: white;
     background-color: rgb(237, 125, 50);
     border-color: rgb(237, 125, 50);
@@ -212,6 +214,8 @@ body {
 }
 
 .button-top-right-2 {
+    outline: none;
+    background: none;
     color: black;
     border: solid 2px black;
     font-size: 20px;
@@ -272,8 +276,8 @@ body {
 
 .button-login-1 {
     color: white;
-    background-color: rgb(68, 114, 196);
-    border-color: rgb(47, 82, 143);
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -285,9 +289,9 @@ body {
 }
 
 .button-login-2 {
-    color: rgb(48, 85, 152);
+    color: rgb(237, 125, 50);
     background-color: white;
-    border: solid 2px rgb(68, 114, 196);
+    border: solid 2px rgb(237, 125, 50);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;

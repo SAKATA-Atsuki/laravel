@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// top
+Route::get('/', 'TopController@index')->name('top');
+
 // join
 Route::get('join', 'MemberController@getIndex')->name('join');
 Route::post('join', 'MemberController@postIndex')->name('join');
