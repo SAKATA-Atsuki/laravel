@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// top
 Route::get('/', 'TopController@index')->name('top');
 
 // join

@@ -61,6 +61,8 @@
                 <p class="error">{!! nl2br(e($message)) !!}</p>
             @enderror
             <input type="submit" value="確認画面へ" class="button-index-1">
+            <br>
+            <a href="{{ route('top') }}" class="button-index-2">トップに戻る</a>
         </form>
     </div>
 </body>

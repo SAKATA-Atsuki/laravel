@@ -13,6 +13,7 @@
     </div>
     <div id="content">
         <p class="complete-content">会員登録が完了しました。</p>
+        <a href="{{ route('register.login') }}" class="button-complete">トップに戻る</a>
     </div>
 </body>
 </html>

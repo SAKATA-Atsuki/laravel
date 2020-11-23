@@ -48,18 +48,25 @@ trait RegistersUsers
             return redirect()->route('register')->withInput($session_register);
         } else {
             event(new Registered($user = $this->create($session_register))); // DBに保存
-            return redirect()->route('register.complete');    
+
+            return $this->registered($request, $user)
+                            ?: redirect($this->redirectPath());
         }
-
-        // $this->guard()->login($user);
-
-        // return $this->registered($request, $user)
-        //                 ?: redirect($this->redirectPath());
     }
 
     public function complete()
     {
         return view('auth.complete');
+    }
+
+    public function login(Request $request)
+    {
+        $session_register = $request->session()->get('register');
+        $user = $this->create($session_register);
+
+        $this->guard()->login($user);
+
+        return redirect()->route('top');
     }
 
     /**

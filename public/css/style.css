@@ -72,9 +72,9 @@ body {
 }
 
 .button-index-2 {
-    color: rgb(48, 85, 152);
+    color: rgb(237, 125, 50);
     background-color: white;
-    border: solid 2px rgb(68, 114, 196);
+    border: solid 2px rgb(237, 125, 50);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -118,8 +118,8 @@ body {
 
 .button-complete {
     color: white;
-    background-color: rgb(68, 114, 196);
-    border: solid 2px rgb(47, 82, 143);
+    background-color: rgb(237, 125, 50);
+    border: solid 2px rgb(237, 125, 50);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -224,10 +224,9 @@ body {
     border: solid 2px black;
     font-size: 20px;
     letter-spacing: 1px;
-    padding: 10px 26px;
+    padding: 5px 26px;
     text-decoration: none;
-    margin-left: 12px;
-    margin-right: 20px;
+    margin: -7px 20px -6px 12px;
 }
 
 .welcome {
@@ -279,6 +278,8 @@ body {
 }
 
 .button-login-1 {
+    outline: none;
+    background: none;
     color: white;
     background-color: rgb(237, 125, 50);
     border-color: rgb(237, 125, 50);

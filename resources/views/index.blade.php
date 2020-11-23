@@ -10,7 +10,7 @@
 <body>
     @if (Auth::check())
         <div id="top-head-2">
-            {{-- <span class="welcome">ようこそ{{ $session_join['name_sei'] }}　{{ $session_join['name_mei'] }}様</span> --}}
+            <span class="welcome">ようこそ{{ Auth::user()->name_sei }}　{{ Auth::user()->name_mei }}様</span>
             <div>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

@@ -13,6 +13,7 @@
     </div>
     <div id="content">
         <p class="complete-content">会員登録が完了しました。</p>
+        <a href="<?php echo e(route('register.login')); ?>" class="button-complete">トップに戻る</a>
     </div>
 </body>
 </html><?php /**PATH /Applications/MAMP/htdocs/laravelbbs/resources/views/auth/complete.blade.php ENDPATH**/ ?>
