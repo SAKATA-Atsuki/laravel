@@ -21,6 +21,7 @@
             <div>
                 <span>パスワード</span>
                 <input type="password" name="password" size="45" maxlength="255" value="" class="password-login">
+                <a href="<?php echo e(route('password.request')); ?>" class="forget-password">パスワードを忘れた方はこちら</a>
             </div>
             <?php if(count($errors) > 0): ?>
                 <p class="error">※IDもしくはパスワードが間違っています</p>

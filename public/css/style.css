@@ -226,7 +226,7 @@ body {
     letter-spacing: 1px;
     padding: 5px 26px;
     text-decoration: none;
-    margin: -7px 20px -6px 12px;
+    margin: -7px 20px -8px 12px;
 }
 
 .welcome {
@@ -277,6 +277,13 @@ body {
     margin-left: 110px;
 }
 
+.forget-password {
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 220px;
+}
+
 .button-login-1 {
     outline: none;
     background: none;
@@ -305,6 +312,71 @@ body {
     margin-left: 158px;
     text-decoration: none;
 }
+
+/* auth/passwords/email.php -------------------------------------------------- */
+
+#email-head {
+    margin: -8px;
+    background-color: rgb(253, 227, 214);
+    padding: 35px;
+}
+
+#email-content {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.email-message {
+    text-align: left;
+    width: 600px;
+    margin: 60px auto 80px auto;
+}
+
+.email-email {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-error {
+    color: red;
+    font-size: 15px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.button-email-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-bottom: 35px;
+}
+
+.button-email-2 {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* thread/      /.php -------------------------------------------------- */
 
 #body-thread {
     width: 530px;

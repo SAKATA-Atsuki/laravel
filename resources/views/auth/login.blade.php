@@ -21,6 +21,7 @@
             <div>
                 <span>パスワード</span>
                 <input type="password" name="password" size="45" maxlength="255" value="" class="password-login">
+                <a href="{{ route('password.request') }}" class="forget-password">パスワードを忘れた方はこちら</a>
             </div>
             @if (count($errors) > 0)
                 <p class="error">※IDもしくはパスワードが間違っています</p>

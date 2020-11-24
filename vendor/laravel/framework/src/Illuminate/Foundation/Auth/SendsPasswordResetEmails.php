@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
+use App\Http\Requests\PasswordResetRequest;
 
 trait SendsPasswordResetEmails
 {
@@ -23,9 +24,9 @@ trait SendsPasswordResetEmails
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
-    public function sendResetLinkEmail(Request $request)
+    public function sendResetLinkEmail(PasswordResetRequest $request)
     {
-        $this->validateEmail($request);
+        // $this->validateEmail($request);
 
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
