@@ -12,14 +12,14 @@
         <p>会員情報登録</p>
     </div>
     <div id="content">
-        <form action="<?php echo e(route('join')); ?>" method="POST">
+        <form action="join" method="POST">
             <?php echo csrf_field(); ?>
             <div>
                 <span>氏名</span>
                 <span class="name_sei">姓</span>
-                <input type="text" name="name_sei" size="18" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['name_sei']); ?><?php else: ?><?php echo e(old('name_sei')); ?><?php endif; ?>">
+                <input type="text" name="name_sei" size="18" maxlength="255" value="<?php echo e(old('name_sei')); ?>">
                 <span class="name_mei">名</span>
-                <input type="text" name="name_mei" size="18" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['name_mei']); ?><?php else: ?><?php echo e(old('name_mei')); ?><?php endif; ?>">
+                <input type="text" name="name_mei" size="18" maxlength="255" value="<?php echo e(old('name_mei')); ?>">
             </div>
             <?php $__errorArgs = ['name_sei'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -42,7 +42,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
             <p>ニックネーム
-                <input type="text" name="nickname" size="36" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['nickname']); ?><?php else: ?><?php echo e(old('nickname')); ?><?php endif; ?>" class="nickname">
+                <input type="text" name="nickname" size="36" maxlength="255" value="<?php echo e(old('nickname')); ?>" class="nickname">
             </p>
             <?php $__errorArgs = ['nickname'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -54,19 +54,10 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-            <?php
-                if (isset($session_join)) {
-                    $gender = $session_join['gender'];
-                } else {
-                    $gender = old('gender');
-                }
-            ?>
             <div class="gender">
                 <span class="gender_gender">性別</span>
-                <?php $__currentLoopData = config('master.gender'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <input type="radio" name="gender" value="<?php echo e($index); ?>" <?php if($gender == $index): ?> checked <?php endif; ?>><?php echo e($value); ?>
-
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <input type="radio" name="gender" value="1" <?php if(old('gender') === "1"): ?> checked <?php endif; ?>>男性
+                <input type="radio" name="gender" value="2" <?php if(old('gender') === "2"): ?> checked <?php endif; ?>>女性
             </div>
             <?php $__errorArgs = ['gender'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -79,7 +70,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
             <p>パスワード
-                <input type="password" name="password1" size="36" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['password1']); ?><?php else: ?><?php echo e(old('password1')); ?><?php endif; ?>" class="password1">
+                <input type="password" name="password1" size="36" maxlength="255" value="<?php echo e(old('password1')); ?>" class="password1">
             </p>
             <?php $__errorArgs = ['password1'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -92,7 +83,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
             <p>パスワード確認
-                <input type="password" name="password2" size="36" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['password2']); ?><?php else: ?><?php echo e(old('password2')); ?><?php endif; ?>" class="password2">
+                <input type="password" name="password2" size="36" maxlength="255" value="<?php echo e(old('password2')); ?>" class="password2">
             </p>
             <?php $__errorArgs = ['password2'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -105,7 +96,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
             <p>メールアドレス
-                <input type="text" name="email" size="36" maxlength="255" value="<?php if(isset($session_join)): ?><?php echo e($session_join['email']); ?><?php else: ?><?php echo e(old('email')); ?><?php endif; ?>" class="email">
+                <input type="text" name="email" size="36" maxlength="255" value="<?php echo e(old('email')); ?>" class="email">
             </p>
             <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
