@@ -437,8 +437,8 @@
       'name' => 'laravelbbs',
     ),
     'encryption' => 'tls',
-    'username' => NULL,
-    'password' => NULL,
+    'username' => 'd6ead2dee63324',
+    'password' => 'ebaecfde9b0594',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => 
     array (
