@@ -21,9 +21,7 @@
             @error('email')
                 <p class="email-error">{{ $message }}</p>
             @enderror
-            <button type="submit" class="btn btn-primary">
-                {{ __('Send Password Reset Link') }}
-            </button>
+            <input type="submit" value="送信する" class="button-email-1">
             <br>
             <a href="{{ route('top') }}" class="button-email-2">トップに戻る</a>    
         </form>
