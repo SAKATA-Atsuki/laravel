@@ -18,9 +18,7 @@
                 </form>
             </div>
         </div>
-        <div id="top-bottom">
-            
-        </div>
+        
     <?php else: ?>
         <div id="top-head-1">
             <a href="<?php echo e(route('register')); ?>" class="button-top-center-1">新規会員登録</a>

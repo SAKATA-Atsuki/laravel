@@ -48,6 +48,7 @@ trait RegistersUsers
             return redirect()->route('register')->withInput($session_register);
         } else {
             event(new Registered($user = $this->create($session_register))); // DBに保存
+            $request->session()->put('user', $user);
 
             return $this->registered($request, $user)
                             ?: redirect($this->redirectPath());
@@ -61,8 +62,7 @@ trait RegistersUsers
 
     public function login(Request $request)
     {
-        $session_register = $request->session()->get('register');
-        $user = $this->create($session_register);
+        $user = $request->session()->get('user');
 
         $this->guard()->login($user);
 

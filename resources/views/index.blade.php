@@ -18,9 +18,9 @@
                 </form>
             </div>
         </div>
-        <div id="top-bottom">
-            {{-- <a href="{{ route('top.leave') }}" class="button-top-bottom">退会</a> --}}
-        </div>
+        {{-- <div id="top-bottom">
+            <a href="{{ route('top.leave') }}" class="button-top-bottom">退会</a>
+        </div> --}}
     @else
         <div id="top-head-1">
             <a href="{{ route('register') }}" class="button-top-center-1">新規会員登録</a>
