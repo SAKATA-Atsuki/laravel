@@ -36,8 +36,9 @@ trait SendsPasswordResetEmails
         );
 
         return $response == Password::RESET_LINK_SENT
-                    ? $this->sendResetLinkResponse($request, $response)
-                    : $this->sendResetLinkFailedResponse($request, $response);
+                    ?: redirect()->route('top');
+                    // ? $this->sendResetLinkResponse($request, $response)
+                    // : $this->sendResetLinkFailedResponse($request, $response);
     }
 
     /**

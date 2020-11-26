@@ -10,13 +10,6 @@
 <body>
     <div id="email-head"></div>
     <div id="email-content">
-        
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
-
         <form action="{{ route('password.email') }}" method="POST">
             @csrf
             <p class="email-message">パスワード再設定用の URL を記載したメールを送信します。<br>
