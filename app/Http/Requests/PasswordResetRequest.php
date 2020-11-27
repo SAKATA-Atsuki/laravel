@@ -13,12 +13,7 @@ class PasswordResetRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == 'password/email')
-        {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 
     /**
