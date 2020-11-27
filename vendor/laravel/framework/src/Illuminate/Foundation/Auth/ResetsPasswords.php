@@ -35,9 +35,9 @@ trait ResetsPasswords
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
-    public function reset(Request $request)
+    public function reset(MemberRequest $request)
     {
-        $request->validate($this->rules(), $this->validationErrorMessages());
+        // $request->validate($this->rules(), $this->validationErrorMessages());
 
         // Here we will attempt to reset the user's password. If it is successful we
         // will update the password on an actual user model and persist it to the
@@ -89,7 +89,7 @@ trait ResetsPasswords
     protected function credentials(Request $request)
     {
         return $request->only(
-            'email', 'password', 'password_confirmation', 'token'
+            'password1', 'password2'
         );
     }
 
