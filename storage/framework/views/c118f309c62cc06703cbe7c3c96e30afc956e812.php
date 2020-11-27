@@ -15,9 +15,9 @@
             <input type="hidden" name="token" value="<?php echo e($token); ?>">
             <div class="password-reset-1">
                 <span>パスワード</span>
-                <input type="password" name="password1" size="58" maxlength="255" value="">
+                <input type="password" name="password" size="58" maxlength="255" value="">
             </div>
-            <?php $__errorArgs = ['password1'];
+            <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -29,9 +29,9 @@ endif;
 unset($__errorArgs, $__bag); ?>
             <div class="password-reset-2">
                 <span>パスワード確認</span>
-                <input type="password" name="password2" size="58" maxlength="255" value="">
+                <input type="password" name="password_confirmation" size="58" maxlength="255" value="">
             </div>
-            <?php $__errorArgs = ['password2'];
+            <?php $__errorArgs = ['password_confirmation'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
