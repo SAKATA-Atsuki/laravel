@@ -4,7 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
-use App\Http\Requests\MemberRequest;
+use App\Http\Requests\ResetRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
@@ -36,7 +36,7 @@ trait ResetsPasswords
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
-    public function reset(MemberRequest $request)
+    public function reset(ResetRequest $request)
     {
         // $request->validate($this->rules(), $this->validationErrorMessages());
 
