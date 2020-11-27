@@ -38,9 +38,9 @@ class ResetRequest extends FormRequest
             'password.required' => '　　　　　※パスワードは必須入力です',
             'password.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
             'password.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password_confirmation.required' => '　　　　　※パスワードは必須入力です',
-            'password_confirmation.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password_confirmation.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
+            'password_confirmation.required' => '　　　　　※パスワード確認は必須入力です',
+            'password_confirmation.min' => '　　　　　※パスワード確認は８〜２０文字で入力してください',
+            'password_confirmation.max' => '　　　　　※パスワード確認は８〜２０文字で入力してください',
             'password_confirmation.same' => '　　　　　※入力した文字が「パスワード」と一致しません'
         ];
     }
