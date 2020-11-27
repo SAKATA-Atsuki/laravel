@@ -26,6 +26,7 @@ class ResetRequest extends FormRequest
     {
         return [
             //
+            'token' => 'required',
             'password1' => ['required', new Hankaku, 'min:8', 'max:20'],
             'password2' => ['required', new Hankaku, 'min:8', 'max:20', 'same:password1']
         ];
