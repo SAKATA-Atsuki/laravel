@@ -99,7 +99,7 @@ trait ResetsPasswords
     protected function credentials(Request $request)
     {
         return $request->only(
-            'password1', 'password2'
+            'password1', 'password2', 'token'
         );
     }
 
