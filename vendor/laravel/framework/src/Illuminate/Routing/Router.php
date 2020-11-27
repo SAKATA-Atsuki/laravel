@@ -1158,12 +1158,11 @@ class Router implements BindingRegistrar, RegistrarContract
         if ($options['register'] ?? true) {
             $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
             $this->post('register', 'Auth\RegisterController@register');
+            $this->get('register/check', 'Auth\RegisterController@check')->name('register.check');
+            $this->post('register/store', 'Auth\RegisterController@store')->name('register.store');
+            $this->get('register/complete', 'Auth\RegisterController@complete')->name('register.complete');
+            $this->get('register/login', 'Auth\RegisterController@login')->name('register.login');    
         }
-
-        $this->get('register/check', 'Auth\RegisterController@check')->name('register.check');
-        $this->post('register/store', 'Auth\RegisterController@store')->name('register.store');
-        $this->get('register/complete', 'Auth\RegisterController@complete')->name('register.complete');
-        $this->get('register/login', 'Auth\RegisterController@login')->name('register.login');
 
         // Password Reset Routes...
         if ($options['reset'] ?? true) {
@@ -1191,6 +1190,7 @@ class Router implements BindingRegistrar, RegistrarContract
     {
         $this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
         $this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+        $this->get('password/sent', 'Auth\ForgotPasswordController@sent')->name('password.sent');
         $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
         $this->post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
     }

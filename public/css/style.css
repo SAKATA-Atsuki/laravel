@@ -376,6 +376,14 @@ body {
     text-decoration: none;
 }
 
+/* auth/passwords/sent.php -------------------------------------------------- */
+
+.sent-message {
+    width: 600px;
+    margin: 70px auto 70px auto;
+}
+
+
 /* thread/      /.php -------------------------------------------------- */
 
 #body-thread {

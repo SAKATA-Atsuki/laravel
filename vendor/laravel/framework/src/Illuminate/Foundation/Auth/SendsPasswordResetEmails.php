@@ -46,7 +46,12 @@ trait SendsPasswordResetEmails
             $this->sendResetLinkFailedResponse($request, $response);
         }
 
-        return redirect()->route('top');
+        return redirect()->route('password.sent');
+    }
+
+    public function sent()
+    {
+        return view('auth.passwords.sent');
     }
 
     /**
