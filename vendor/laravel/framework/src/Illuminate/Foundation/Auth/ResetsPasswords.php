@@ -114,7 +114,7 @@ trait ResetsPasswords
     {
         $this->setUserPassword($user, $password);
 
-        $user->setRememberToken(Str::random(60));
+        // $user->setRememberToken(Str::random(60));
 
         $user->save();
 
