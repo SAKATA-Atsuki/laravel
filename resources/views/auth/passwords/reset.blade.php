@@ -15,16 +15,16 @@
             <input type="hidden" name="token" value="{{ $token }}">
             <div class="password-reset-1">
                 <span>パスワード</span>
-                <input type="password" name="password1" size="58" maxlength="255" value="">
+                <input type="password" name="password" size="58" maxlength="255" value="">
             </div>
-            @error('password1')
+            @error('password')
                 <p class="email-error">{{ $message }}</p>
             @enderror
             <div class="password-reset-2">
                 <span>パスワード確認</span>
-                <input type="password" name="password2" size="58" maxlength="255" value="">
+                <input type="password" name="password_confirmation" size="58" maxlength="255" value="">
             </div>
-            @error('password2')
+            @error('password_confirmation')
                 <p class="email-error">{{ $message }}</p>
             @enderror
             <input type="submit" value="パスワードリセット" class="button-reset">

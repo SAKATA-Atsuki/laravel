@@ -27,21 +27,21 @@ class ResetRequest extends FormRequest
         return [
             //
             'token' => 'required',
-            'password1' => ['required', new Hankaku, 'min:8', 'max:20'],
-            'password2' => ['required', new Hankaku, 'min:8', 'max:20', 'same:password1']
+            'password' => ['required', new Hankaku, 'min:8', 'max:20'],
+            'password_confirmation' => ['required', new Hankaku, 'min:8', 'max:20', 'same:password']
         ];
     }
 
     public function messages()
     {
         return [
-            'password1.required' => '　　　　　※パスワードは必須入力です',
-            'password1.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password1.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password2.required' => '　　　　　※パスワードは必須入力です',
-            'password2.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password2.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
-            'password2.same' => '　　　　　※入力した文字が「パスワード」と一致しません'
+            'password.required' => '　　　　　※パスワードは必須入力です',
+            'password.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
+            'password.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
+            'password_confirmation.required' => '　　　　　※パスワードは必須入力です',
+            'password_confirmation.min' => '　　　　　※パスワードは８〜２０文字で入力してください',
+            'password_confirmation.max' => '　　　　　※パスワードは８〜２０文字で入力してください',
+            'password_confirmation.same' => '　　　　　※入力した文字が「パスワード」と一致しません'
         ];
     }
 }
