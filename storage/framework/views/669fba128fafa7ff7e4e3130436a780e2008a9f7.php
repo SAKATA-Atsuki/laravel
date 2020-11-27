@@ -10,14 +10,6 @@
 <body>
     <div id="email-head"></div>
     <div id="email-content">
-        
-        <?php if(session('status')): ?>
-            <div class="alert alert-success" role="alert">
-                <?php echo e(session('status')); ?>
-
-            </div>
-        <?php endif; ?>
-
         <form action="<?php echo e(route('password.email')); ?>" method="POST">
             <?php echo csrf_field(); ?>
             <p class="email-message">パスワード再設定用の URL を記載したメールを送信します。<br>
