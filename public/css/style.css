@@ -212,7 +212,7 @@ body {
     border: solid 2px black;
     font-size: 20px;
     letter-spacing: 1px;
-    padding: 10px 10px;
+    padding: 10px 33px;
     text-decoration: none;
     margin-left: 12px;
 }
@@ -224,9 +224,10 @@ body {
     border: solid 2px black;
     font-size: 20px;
     letter-spacing: 1px;
-    padding: 5px 26px;
+    padding: 10px 26px;
     text-decoration: none;
-    margin: -7px 20px -8px 12px;
+    margin-left: 12px;
+    margin-right: 20px;
 }
 
 .welcome {
@@ -1345,4 +1346,19 @@ body {
     padding: 15px 70px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+/* product/register.php -------------------------------------------------- */
+
+#product-register-content {
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 600px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+.product-register-name {
+    display: flex;
+    justify-content: space-between;
 }

@@ -12,10 +12,8 @@
         <div id="top-head-2">
             <span class="welcome">ようこそ{{ Auth::user()->name_sei }}　{{ Auth::user()->name_mei }}様</span>
             <div>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <input type="submit" class="button-top-right-2" value="ログアウト">
-                </form>
+                <a href="{{ route('product.register') }}" class="button-top-center-2">新規商品登録</a>
+                <a href="{{ route('logout') }}" class="button-top-right-2">ログアウト</a>
             </div>
         </div>
         {{-- <div id="top-bottom">

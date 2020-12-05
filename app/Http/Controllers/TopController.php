@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class TopController extends Controller
 {
     //
-    public function index(Request $request)
+    public function index()
     {
         return view('index');
     }
