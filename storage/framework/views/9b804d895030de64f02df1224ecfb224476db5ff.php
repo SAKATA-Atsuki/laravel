@@ -12,10 +12,8 @@
         <div id="top-head-2">
             <span class="welcome">ようこそ<?php echo e(Auth::user()->name_sei); ?>　<?php echo e(Auth::user()->name_mei); ?>様</span>
             <div>
-                <form action="<?php echo e(route('logout')); ?>" method="POST">
-                    <?php echo csrf_field(); ?>
-                    <input type="submit" class="button-top-right-2" value="ログアウト">
-                </form>
+                <a href="<?php echo e(route('product.register')); ?>" class="button-top-center-2">新規商品登録</a>
+                <a href="<?php echo e(route('logout')); ?>" class="button-top-right-2">ログアウト</a>
             </div>
         </div>
         
