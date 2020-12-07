@@ -23,5 +23,6 @@ Route::get('/', 'TopController@index')->name('top');
 
 // product
 Route::get('product/register', 'ProductController@register')->name('product.register');
-Route::post('product/register/fetch', 'ProductController@fetch')->name('product.register.fetch');
+Route::post('product/register/category', 'ProductController@category')->name('product.register.category');
+Route::post('product/register/image', 'ProductController@image')->name('product.register.image');
 Route::post('product/check', 'ProductController@check')->name('product.check');

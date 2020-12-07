@@ -69,6 +69,7 @@ body {
     border-radius: 10px;
     margin-left: 85px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .button-index-2 {
@@ -99,6 +100,7 @@ body {
     border-radius: 10px;
     margin-left: 85px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .button-check-2 {
@@ -114,6 +116,7 @@ body {
     border-radius: 10px;
     margin-left: 85px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .button-complete {
@@ -299,6 +302,7 @@ body {
     margin-left: 158px;
     margin-top: 40px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .button-login-2 {
@@ -363,6 +367,7 @@ body {
     border-radius: 10px;
     margin-top: 90px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .button-email-2 {
@@ -415,6 +420,7 @@ body {
     border-radius: 10px;
     margin-top: 90px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 /* thread/      /.php -------------------------------------------------- */
@@ -1361,4 +1367,50 @@ body {
 .product-register-name {
     display: flex;
     justify-content: space-between;
+}
+
+.category {
+    margin-left: 75px;
+    width: 135px;
+}
+
+.subcategory {
+    margin-left: 15px;
+    width: 135px;
+}
+
+.product-register-image {
+    width: 202px;
+    margin: 0 auto;
+    margin-top: -30px;
+    background-color: lightblue;
+}
+
+.product-register-image-box-1 {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border: solid 1px black;
+}
+
+.product-register-image-1 {
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.product-register-image-upload {
+    display: none;
 }

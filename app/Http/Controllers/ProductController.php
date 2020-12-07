@@ -16,32 +16,33 @@ class ProductController extends Controller
         return view('product.register', ['categories' => $categories]);
     }
 
-    public function fetch(Request $request)
+    public function category(Request $request)
     {
-        $category_id = $request->get('category_id');
+        $category_id = $request->category_id;
         $subcategories = Product_subcategory::all();
-        
         $subcategories_list = array();
-        foreach ($subcategories as $subcategory) {
-            if ($subcategory->product_category_id == $category_id) {
-                $subcategories_list[$subcategory->id] = $subcategory->name;
-            }
+
+        if ($category_id == 0) {
+            $subcategories_list[0] = '----------------';
+        } else {
+            foreach ($subcategories as $subcategory) {
+                if ($subcategory->product_category_id == $category_id) {
+                    $subcategories_list[$subcategory->id] = $subcategory->name;
+                }
+            }    
         }
 
-        //json形式でregister.blade.phpへバックする
+        // json形式でregister.blade.phpへバックする
         echo json_encode($subcategories_list);
+    }
 
-        $category_id = $request->get('category_id');
-        $subcategories = Product_subcategory::all();
-        
-        $subcategories_list = array();
-        foreach ($subcategories as $subcategory) {
-            if ($subcategory->product_category_id == $category_id) {
-                $subcategories_list[$subcategory->id] = $subcategory->name;
-            }
-        }
+    public function image(Request $request)
+    {
+        $name = time() . $request->url;
+        $request->url->move(public_path('images'), $name);
 
-        echo $subcategories_list;
+        // json形式でregister.blade.phpへバックする
+        echo json_encode($name);
     }
 
     public function check()
