@@ -45,6 +45,7 @@
                     url: "{{ route('product.register.image') }}",
                     type: "POST",
                     dataType: "json",
+                    processData: false,
                     data: {
                         formdata: formdata,
                         _token: _token
@@ -68,6 +69,7 @@
                 .fail(function() {
                     console.log("失敗");
                 })
+
             })
         })
     </script>

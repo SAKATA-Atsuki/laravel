@@ -45,6 +45,7 @@
                     url: "<?php echo e(route('product.register.image')); ?>",
                     type: "POST",
                     dataType: "json",
+                    processData: false,
                     data: {
                         formdata: formdata,
                         _token: _token
@@ -68,6 +69,7 @@
                 .fail(function() {
                     console.log("失敗");
                 })
+
             })
         })
     </script>
@@ -124,4 +126,4 @@
         </form>
     </div>
 </body>
-</html><?php /**PATH /Applications/MAMP/htdocs/laravelbbs/resources/views/product/register.blade.php ENDPATH**/ ?>
+</html><?php /**PATH /var/www/laravel/laravelbbs/resources/views/product/register.blade.php ENDPATH**/ ?>
