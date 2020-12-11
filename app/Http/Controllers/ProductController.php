@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Product_category;
 use App\Models\Product_subcategory;
 use Illuminate\Http\Request;
+use App\Http\Requests\ImageCheckRequest;
 
 class ProductController extends Controller
 {
@@ -36,10 +37,9 @@ class ProductController extends Controller
         echo json_encode($subcategories_list);
     }
 
-    public function image(Request $request)
+    public function image(ImageCheckRequest $request)
     {
-        $name = time() . $request->url;
-        $request->url->move(public_path('images'), $name);
+        $name = 'test';
 
         // json形式でregister.blade.phpへバックする
         echo json_encode($name);

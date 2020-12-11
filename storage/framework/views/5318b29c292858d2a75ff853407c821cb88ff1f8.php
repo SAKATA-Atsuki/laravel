@@ -37,34 +37,33 @@
             })
 
             // 画像がアップロードされた場合
-            $('.product-register-image-upload').change(function(e) {
-                // 画像を表示させる処理
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    $('#product-register-image-box-1').empty();
-                    $('#product-register-image-box-1').append($('<div>').addClass('product-register-image-box-1'));
-                    $('.product-register-image-box-1').append($('<img>').attr('src', e.target.result).addClass('product-register-image-1'));
-                }
-                reader.readAsDataURL(e.target.files[0]);
-
-                // type="hidden"のinputタグに、画像の情報を入れる処理
-                var name = $(this).val();
+            $('#product-register-image-upload-1').change(function(e) {
+                var formdata = new FormData($('#product-register-form').get(0));
                 var _token = $('input[name="_token"]').val();
 
-                // 
                 $.ajax({
                     url: "<?php echo e(route('product.register.image')); ?>",
                     type: "POST",
                     dataType: "json",
                     data: {
-                        name: name,
-                        url: e.target.result,
+                        formdata: formdata,
                         _token: _token
                     }
                 })
                 .done(function(data) {
-                    $('#product-register-image-1').attr('value', data)
-                    console.log("成功");
+                    // 画像を表示させる処理
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#product-register-image-box-1').empty();
+                        $('#product-register-image-box-1').append($('<div>').addClass('product-register-image-box-1'));
+                        $('.product-register-image-box-1').append($('<img>').attr('src', e.target.result).addClass('product-register-image-1'));
+
+                        $('#product-register-image-box-1').append($('<input>').attr('value', data));
+                    }
+                    reader.readAsDataURL(e.target.files[0]);
+
+                    // hidden属性のinputタグに画像の名前を入れる
+                    $('#product-register-image-1').attr('value', data);
                 })
                 .fail(function() {
                     console.log("失敗");
@@ -80,7 +79,7 @@
         <p>商品登録</p>
     </div>
     <div id="product-register-content">
-        <form action="<?php echo e(route('product.check')); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo e(route('product.check')); ?>" method="POST" enctype="multipart/form-data" id="product-register-form">
             <?php echo csrf_field(); ?>
             <div class="product-register-name">
                 <span>商品名</span>
@@ -108,10 +107,19 @@
                     <div id="product-register-image-box-1"></div>
                     <div style="text-align: center;">
                         <label for="product-register-image-upload-1">
-                            <input type="file" id="product-register-image-upload-1" class="product-register-image-upload">アップロード
+                            <input type="file" id="product-register-image-upload-1" name="product-register-image-upload-1" class="product-register-image-upload">アップロード
                         </label>
                     </div>
                 </div>
+            </div>
+            <div>
+                <span>商品説明</span><br>
+                <textarea name="explanation" id="explanation" cols="40" rows="6" class="product-register-explanation"></textarea>
+            </div>
+            <div class="button-register-product">
+                <input type="submit" value="確認画面へ" class="button-register-product-1">
+                <br>
+                <a href="<?php echo e(route('top')); ?>" class="button-register-product-2">トップに戻る</a>    
             </div>
         </form>
     </div>

@@ -1414,3 +1414,38 @@ label {
 .product-register-image-upload {
     display: none;
 }
+
+.product-register-explanation {
+    margin-left: 200px;
+}
+
+.button-register-product {
+    text-align: center;
+}
+.button-register-product-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 70px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.button-register-product-2 {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    text-decoration: none;
+}
