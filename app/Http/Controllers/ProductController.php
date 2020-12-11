@@ -37,12 +37,10 @@ class ProductController extends Controller
         echo json_encode($subcategories_list);
     }
 
-    public function image(ImageCheckRequest $request)
+    public function image(Request $request)
     {
-        $name = 'test';
-
-        // json形式でregister.blade.phpへバックする
-        echo json_encode($name);
+        $formData = $request->formData;
+        return view('product.image', compact('formData'));
     }
 
     public function check()
