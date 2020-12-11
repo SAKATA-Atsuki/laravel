@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script type="text/javascript">
         $(function() {
             // categoryが変更された場合
             $('.category').change(function() {
                 var category_id = $(this).val();
-                var _token = $('input[name="_token"]').val();
 
                 // category_idの値を渡す
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                })
                 $.ajax({
                     url: "<?php echo e(route('product.register.category')); ?>",
                     type: "POST",
                     dataType: "json",
                     data: {
-                        category_id: category_id,
-                        _token: _token
+                        category_id: category_id
                     }
                 })
                 .done(function(data) {
@@ -38,17 +42,19 @@
 
             // 画像がアップロードされた場合
             $('#product-register-image-upload-1').change(function(e) {
-                var formdata = new FormData($('#product-register-form').get(0));
-                var _token = $('input[name="_token"]').val();
+                var formData = new FormData($('#product-register-form').get(0));
 
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                })
                 $.ajax({
                     url: "<?php echo e(route('product.register.image')); ?>",
                     type: "POST",
-                    dataType: "json",
                     processData: false,
                     data: {
-                        formdata: formdata,
-                        _token: _token
+                        formData: formData
                     }
                 })
                 .done(function(data) {
