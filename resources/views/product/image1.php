@@ -8,7 +8,7 @@ if ($ext3 != 'jpg' && $ext4 != 'jpeg' && $ext3 != 'png' && $ext3 != 'gif') {
     echo 'size';
 } else {
     $image = date('YmdHis') . $fileName;
-    move_uploaded_file($_FILES['product-register-image-upload-1']['tmp_name'], '../../public/images/' . $image);
+    move_uploaded_file($_FILES['product-register-image-upload-1']['tmp_name'], 'https://4433.tec-college.com/images/' . $image);
     echo $image;
 }
 ?>
