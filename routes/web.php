@@ -24,5 +24,9 @@ Route::get('/', 'TopController@index')->name('top');
 // product
 Route::get('product/register', 'ProductController@register')->name('product.register');
 Route::post('product/register/category', 'ProductController@category')->name('product.register.category');
-Route::post('product/register/image', 'ProductController@image')->name('product.register.image');
+Route::post('product/register/image1', 'ProductController@image1')->name('product.register.image1');
+Route::post('product/register/image2', 'ProductController@image2')->name('product.register.image2');
+Route::post('product/register/image3', 'ProductController@image3')->name('product.register.image3');
+Route::post('product/register/image4', 'ProductController@image4')->name('product.register.image4');
 Route::post('product/check', 'ProductController@check')->name('product.check');
+Route::post('product/store', 'ProductController@store')->name('product.store');
