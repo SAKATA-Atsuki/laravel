@@ -337,7 +337,11 @@
             <div class="button-register-product">
                 <input type="submit" value="確認画面へ" class="button-register-product-1">
                 <br>
-                <a href="{{ route('top') }}" class="button-register-product-2">トップに戻る</a>    
+                @if ($topOrList)
+                    <a href="{{ route('product.list') }}" class="button-register-product-2">商品一覧に戻る</a>
+                @else
+                    <a href="{{ route('top') }}" class="button-register-product-3">トップに戻る</a>
+                @endif
             </div>
         </form>
     </div>

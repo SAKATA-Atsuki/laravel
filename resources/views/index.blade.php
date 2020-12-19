@@ -12,6 +12,7 @@
         <div id="top-head-2">
             <span class="welcome">ようこそ{{ Auth::user()->name_sei }}　{{ Auth::user()->name_mei }}様</span>
             <div>
+                <a href="{{ route('product.list') }}" class="button-top-left-2">商品一覧</a>
                 <a href="{{ route('product.register') }}" class="button-top-center-2">新規商品登録</a>
                 <a href="{{ route('logout') }}" class="button-top-right-2">ログアウト</a>
             </div>
@@ -21,6 +22,7 @@
         </div> --}}
     @else
         <div id="top-head-1">
+            <a href="{{ route('product.list') }}" class="button-top-left-1">商品一覧</a>
             <a href="{{ route('register') }}" class="button-top-center-1">新規会員登録</a>
             <a href="{{ route('login') }}" class="button-top-right-1">ログイン</a>
         </div>

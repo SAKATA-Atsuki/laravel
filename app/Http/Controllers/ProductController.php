@@ -12,11 +12,21 @@ use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
     //
-    public function register()
+    public function register(Request $request)
     {
         $categories = Product_category::all();
         $subcategories = Product_subcategory::all();
-        return view('product.register', ['categories' => $categories, 'subcategories' => $subcategories]);
+        $topOrList = 0;
+        return view('product.register', compact('categories', 'subcategories', 'topOrList'));
+    }
+
+    public function register2(Request $request)
+    {
+        $request->session()->forget('product_search');
+        $categories = Product_category::all();
+        $subcategories = Product_subcategory::all();
+        $topOrList = 1;
+        return view('product.register', compact('categories', 'subcategories', 'topOrList'));
     }
 
     public function category(Request $request)
@@ -88,5 +98,35 @@ class ProductController extends Controller
 
             return redirect()->route('top');
         }
+    }
+
+    public function list(Request $request)
+    {
+        $categories = Product_category::all();
+        $subcategories = Product_subcategory::all();
+
+        if ($request->session()->exists('product_search')) {
+            $session_product_search = $request->session()->get('product_search');
+        } else {
+            $session_product_search['category'] = 0;
+            $session_product_search['subcategory'] = 0;
+            $session_product_search['word'] = '';
+        }
+
+        $results = Product::where('product_category_id', $session_product_search['category'])
+                            ->where('product_subcategory_id', $session_product_search['subcategory'])
+                            ->where('name', 'like', '%' . $session_product_search['word'] . '%')
+                            ->where('product_content', 'like', '%' . $session_product_search['word'] . '%')
+                            ->simplePaginate(10);
+
+        return view('product.list', compact('categories', 'subcategories', 'session_product_search', 'results'));
+    }
+
+    public function search(Request $request)
+    {
+        $conditions = $request->all();
+        $request->session()->put('product_search', $conditions);
+
+        return redirect()->route('product.list');
     }
 }
