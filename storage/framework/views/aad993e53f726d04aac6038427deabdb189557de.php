@@ -358,7 +358,11 @@ unset($__errorArgs, $__bag); ?>
             <div class="button-register-product">
                 <input type="submit" value="確認画面へ" class="button-register-product-1">
                 <br>
-                <a href="<?php echo e(route('top')); ?>" class="button-register-product-2">トップに戻る</a>    
+                <?php if($topOrList): ?>
+                    <a href="<?php echo e(route('product.list')); ?>" class="button-register-product-2">商品一覧に戻る</a>
+                <?php else: ?>
+                    <a href="<?php echo e(route('top')); ?>" class="button-register-product-3">トップに戻る</a>
+                <?php endif; ?>
             </div>
         </form>
     </div>
