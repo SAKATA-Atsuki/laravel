@@ -33,3 +33,4 @@ Route::post('product/check', 'ProductController@check')->name('product.check');
 Route::post('product/store', 'ProductController@store')->name('product.store');
 Route::get('product/list', 'ProductController@list')->name('product.list');
 Route::post('product/search', 'ProductController@search')->name('product.search');
+Route::get('product/detail/{page}/{id}', 'ProductController@detail')->name('product.detail');

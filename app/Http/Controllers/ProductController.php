@@ -119,7 +119,12 @@ class ProductController extends Controller
                             ->where('product_content', 'like', '%' . $session_product_search['word'] . '%')
                             ->simplePaginate(10);
 
-        return view('product.list', compact('categories', 'subcategories', 'session_product_search', 'results'));
+        $page = $request->page;
+        if ($page == 0) {
+            $page = 1;
+        }
+
+        return view('product.list', compact('categories', 'subcategories', 'session_product_search', 'results', 'page'));
     }
 
     public function search(Request $request)
@@ -128,5 +133,12 @@ class ProductController extends Controller
         $request->session()->put('product_search', $conditions);
 
         return redirect()->route('product.list');
+    }
+
+    public function detail(Request $request)
+    {
+        $page = $request->page;
+        $product = Product::find($request->id);
+        return view('product.detail', compact('page', 'product'));
     }
 }
