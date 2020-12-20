@@ -14,10 +14,10 @@
             <div>
                 <a href="<?php echo e(route('product.list')); ?>" class="button-top-left-2">商品一覧</a>
                 <a href="<?php echo e(route('product.register')); ?>" class="button-top-center-2">新規商品登録</a>
+                <a href="<?php echo e(route('mypage')); ?>" class="button-top-center-2">マイページ</a>
                 <a href="<?php echo e(route('logout')); ?>" class="button-top-right-2">ログアウト</a>
             </div>
         </div>
-        
     <?php else: ?>
         <div id="top-head-1">
             <a href="<?php echo e(route('product.list')); ?>" class="button-top-left-1">商品一覧</a>
