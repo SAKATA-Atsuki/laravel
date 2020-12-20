@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Product_category;
 use App\Models\Product_subcategory;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
-    //
     public function register(Request $request)
     {
         $categories = Product_category::all();
@@ -124,7 +124,22 @@ class ProductController extends Controller
             $page = 1;
         }
 
-        return view('product.list', compact('categories', 'subcategories', 'session_product_search', 'results', 'page'));
+        $star = array();
+        foreach ($results as $result) {
+            $reviews = Review::where('product_id', $result->id)->get();
+
+            if (count($reviews)) {
+                $evaluation = 0;
+                foreach ($reviews as $review) {
+                    $evaluation += $review->evaluation;
+                }
+                $star[$result->id] = ceil($evaluation / count($reviews));
+            } else {
+                $star[$result->id] = 0;
+            }    
+        }
+
+        return view('product.list', compact('categories', 'subcategories', 'session_product_search', 'results', 'page', 'star'));
     }
 
     public function search(Request $request)
@@ -139,6 +154,18 @@ class ProductController extends Controller
     {
         $page = $request->page;
         $product = Product::find($request->id);
-        return view('product.detail', compact('page', 'product'));
+        $reviews = Review::where('product_id', $request->id)->get();
+
+        if (count($reviews)) {
+            $evaluation = 0;
+            foreach ($reviews as $review) {
+                $evaluation += $review->evaluation;
+            }
+            $star = ceil($evaluation / count($reviews));
+        } else {
+            $star = 0;
+        }
+
+        return view('product.detail', compact('page', 'product', 'star'));
     }
 }

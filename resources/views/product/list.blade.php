@@ -104,7 +104,26 @@
                     </span>
                     <br><br>
                     <a href="{{ route('product.detail', ['page' => $page, 'id' => $result->id]) }}" class="button-product-list-to-detail-1">{{ $result->name }}</a>
-                    <br><br>
+                    <div class="product-list-star">
+                        @if ($star[$result->id] == 0)
+                            <span>{{ $star[$result->id] }}</span>
+                        @endif
+                        @if ($star[$result->id] == 1)
+                            <span>★ {{ $star[$result->id] }}</span>
+                        @endif
+                        @if ($star[$result->id] == 2)
+                            <span>★★ {{ $star[$result->id] }}</span>
+                        @endif
+                        @if ($star[$result->id] == 3)
+                            <span>★★★ {{ $star[$result->id] }}</span>
+                        @endif
+                        @if ($star[$result->id] == 4)
+                            <span>★★★★ {{ $star[$result->id] }}</span>
+                        @endif
+                        @if ($star[$result->id] == 5)
+                            <span>★★★★★ {{ $star[$result->id] }}</span>
+                        @endif
+                    </div>
                     <div class="product-detail-button">
                         <a href="{{ route('product.detail', ['page' => $page, 'id' => $result->id]) }}" class="button-product-list-to-detail-2">詳細</a>
                     </div>            
@@ -112,7 +131,7 @@
             </div>
         @endforeach
         @if (count($results))
-            <div class="admin-member-main-page">
+            <div class="product-list-page">
                 @if ($results->onFirstPage())
                     <span class="admin-member-main-page-left-off"></span>
                 @else

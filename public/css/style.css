@@ -1195,7 +1195,6 @@ body {
 .admin-member-main-page {
     display: flex;
     justify-content: flex-end;
-    border-top: solid 1px black;
     margin-top: 20px;
     padding-top: 20px;
 }
@@ -1455,6 +1454,7 @@ label {
 .button-register-product {
     text-align: center;
 }
+
 .button-register-product-1 {
     outline: none;
     background: none;
@@ -1620,6 +1620,19 @@ label {
     margin-right: 20px;
 }
 
+.product-list-star {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.product-list-page {
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 1px black;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
 .product-list-button {
     text-align: center;
     margin-top: 90px;
@@ -1662,20 +1675,226 @@ label {
     width: 170px;
 }
 
+.product-detail-to-review {
+    color: blue;
+    text-decoration: none;
+}
+
 .product-detail-button {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 10px;
 }
 
-.button-product-detail {
-    color: white;
-    background-color: rgb(68, 114, 196);
-    border: solid 2px rgb(47, 82, 143);
+.button-product-detail-1 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
     font-size: 15px;
-    font-weight: bold;
     letter-spacing: 1px;
     padding: 5px 10px;
     border-radius: 7px;
     text-decoration: none;
     margin-right: 50px;
+}
+
+.button-product-detail-2 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+/* review/register.php -------------------------------------------------- */
+
+.review-register {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.review-register-content {
+    display: flex;
+    border-bottom: solid 1px black;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.review-register-image {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.review-register-review {
+    display: flex;
+    margin-top: 15px;
+    padding-left: 50px;
+}
+
+.review-register-review-left {
+    width: 130px;
+}
+
+.review-register-review-right {
+}
+
+.review-register-evaluation {
+    width: 100px;
+}
+
+.review-register-button {
+    text-align: center;
+}
+
+.button-review-register-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 13px;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.button-review-register-2 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 47px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* review/check.php -------------------------------------------------- */
+
+.review-check-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-review-check-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.button-review-check-2 {
+    outline: none;
+    background: none;
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* review/complete.php -------------------------------------------------- */
+
+.review-complete-content {
+    font-size: 20px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.button-review-complete {
+    text-align: center;
+}
+
+.button-review-complete-1 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 24.5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button-review-complete-2 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 47px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* review/list.php -------------------------------------------------- */
+
+.review-list-content {
+    display: flex;
+    border-bottom: solid 1px black;
+    padding-bottom: 20px;
+}
+
+.review-list-results {
+}
+
+.review-list-result {
+    border-bottom: solid 1px black;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.review-list-result-content {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.review-list-result-left {
+    width: 160px;
+}
+
+.review-list-result-center {
+    width: 100px;
+}
+
+.review-list-result-name {
+    font-weight: bold;
+}
+
+.review-list-page {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.review-list-button {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

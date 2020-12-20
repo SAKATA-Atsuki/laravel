@@ -34,3 +34,10 @@ Route::post('product/store', 'ProductController@store')->name('product.store');
 Route::get('product/list', 'ProductController@list')->name('product.list');
 Route::post('product/search', 'ProductController@search')->name('product.search');
 Route::get('product/detail/{page}/{id}', 'ProductController@detail')->name('product.detail');
+
+// review
+Route::get('review/register/{page}/{id}', 'ReviewController@register')->name('review.register');
+Route::post('review/check', 'ReviewController@check')->name('review.check');
+Route::post('review/store', 'ReviewController@store')->name('review.store');
+Route::get('review/complete', 'ReviewController@complete')->name('review.complete');
+Route::get('review/list/{pg}/{id}', 'ReviewController@list')->name('review.list');
