@@ -14,12 +14,10 @@
             <div>
                 <a href="{{ route('product.list') }}" class="button-top-left-2">商品一覧</a>
                 <a href="{{ route('product.register') }}" class="button-top-center-2">新規商品登録</a>
+                <a href="{{ route('mypage') }}" class="button-top-center-2">マイページ</a>
                 <a href="{{ route('logout') }}" class="button-top-right-2">ログアウト</a>
             </div>
         </div>
-        {{-- <div id="top-bottom">
-            <a href="{{ route('top.leave') }}" class="button-top-bottom">退会</a>
-        </div> --}}
     @else
         <div id="top-head-1">
             <a href="{{ route('product.list') }}" class="button-top-left-1">商品一覧</a>

@@ -41,3 +41,7 @@ Route::post('review/check', 'ReviewController@check')->name('review.check');
 Route::post('review/store', 'ReviewController@store')->name('review.store');
 Route::get('review/complete', 'ReviewController@complete')->name('review.complete');
 Route::get('review/list/{pg}/{id}', 'ReviewController@list')->name('review.list');
+
+Route::get('mypage', 'MypageController@index')->name('mypage');
+Route::get('mypage/confirm', 'MypageController@confirm')->name('mypage.confirm');
+Route::get('mypage/delete', 'MypageController@delete')->name('mypage.delete');

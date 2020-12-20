@@ -12,8 +12,8 @@ class Review extends Model
         return $this->belongsTo('App\Models\Member');
     }
 
-    public function getName()
+    public function getNickname()
     {
-        return $this->member->name_sei . $this->member->name_mei;
+        return $this->member->nickname;
     }
 }
