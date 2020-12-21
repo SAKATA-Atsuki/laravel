@@ -73,6 +73,7 @@
                 @csrf
                 <input type="submit" value="商品を登録する" class="button-check-product-1">
                 <br>
+                <input type="hidden" name="topOrList" value="{{ $product['topOrList'] }}">
                 <input type="submit" value="前に戻る" name="back" class="button-check-product-2">    
             </div>
         </form>

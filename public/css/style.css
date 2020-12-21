@@ -2116,3 +2116,115 @@ label {
     border-radius: 10px;
     cursor: pointer;
 }
+
+/* mypage/edit/password.php -------------------------------------------------- */
+
+.mypage-edit-password-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.mypage-edit-password-content {
+    width: 416px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mypage-edit-password-content-left {
+    width: 150px;
+}
+
+.mypage-edit-password-button {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.mypage-edit-password-button-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mypage-edit-password-button-2 {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 38px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* mypage/edit/email.php -------------------------------------------------- */
+
+.mypage-edit-email-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.mypage-edit-email-content {
+    width: 466px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mypage-edit-email-content-left {
+    width: 200px;
+}
+
+.mypage-edit-email-button {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.mypage-edit-email-button-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 48px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mypage-edit-email-button-2 {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 38px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* mypage/edit/auth.php -------------------------------------------------- */
+
+.mypage-edit-auth-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}

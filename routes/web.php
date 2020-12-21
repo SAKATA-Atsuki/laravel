@@ -52,4 +52,6 @@ Route::get('mypage/edit/information', 'MypageController@information')->name('myp
 Route::post('mypage/edit/information/check', 'MypageController@informationCheck')->name('mypage.edit.information.check');
 Route::post('mypage/edit/information/store', 'MypageController@informationStore')->name('mypage.edit.information.store');
 Route::get('mypage/edit/password', 'MypageController@password')->name('mypage.edit.password');
+Route::post('mypage/edit/password/store', 'MypageController@passwordStore')->name('mypage.edit.password.store');
 Route::get('mypage/edit/email', 'MypageController@email')->name('mypage.edit.email');
+Route::post('mypage/edit/email/auth', 'MypageController@emailAuth')->name('mypage.edit.email.auth');

@@ -82,7 +82,11 @@ class ProductController extends Controller
         $session_product = $request->session()->get('product');
 
         if ($request->has('back')) {
-            return redirect()->route('product.register')->withInput($session_product);
+            if ($request->topOrList == 0) {
+                return redirect()->route('product.register')->withInput($session_product);
+            } else {
+                return redirect()->route('product.register2')->withInput($session_product);
+            }
         } else {
             $product = new Product;
             $product->member_id = Auth::user()->id;

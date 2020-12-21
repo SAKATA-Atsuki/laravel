@@ -18,11 +18,20 @@
                 <span>　名　</span>
                 <input type="text" name="name_mei" @if (old('name_mei')) value="{{ old('name_mei') }}" @else value="{{ Auth::user()->name_mei }}" @endif size="17">
             </div>
+            @error('name_sei')
+                <p class="error">{{ $message }}</p>
+            @enderror
+            @error('name_mei')
+                <p class="error">{{ $message }}</p>
+            @enderror
             <br>
             <div>
                 <span>ニックネーム　　</span>
                 <input type="text" name="nickname" @if (old('nickname')) value="{{ old('nickname') }}" @else value="{{ Auth::user()->nickname }}" @endif size="40">
             </div>
+            @error('nickname')
+                <p class="error">{{ $message }}</p>
+            @enderror
             <br>
             <div>
                 <span>性別　　　</span>
@@ -34,6 +43,9 @@
                     @endif
                 @endforeach
             </div>
+            @error('gender')
+                <p class="error">{{ $message }}</p>
+            @enderror
             <div class="mypage-edit-information-button">
                 <input type="submit" value="確認画面へ" class="mypage-edit-information-button-1">
                 <br><br>

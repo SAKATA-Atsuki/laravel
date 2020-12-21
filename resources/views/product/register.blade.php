@@ -335,6 +335,7 @@
                 <p class="error">{{ $message }}</p>
             @enderror
             <div class="button-register-product">
+                <input type="hidden" name="topOrList" value="{{ $topOrList }}">
                 <input type="submit" value="確認画面へ" class="button-register-product-1">
                 <br>
                 @if ($topOrList)

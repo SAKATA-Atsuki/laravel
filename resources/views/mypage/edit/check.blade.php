@@ -28,6 +28,10 @@
     <div class="mypage-edit-check-button">
         <form action="{{ route('mypage.edit.information.store') }}" method="POST">
             @csrf
+            <input type="hidden" name="name_sei" value="{{ $data['name_sei'] }}">
+            <input type="hidden" name="name_mei" value="{{ $data['name_mei'] }}">
+            <input type="hidden" name="nickname" value="{{ $data['nickname'] }}">
+            <input type="hidden" name="gender" value="{{ $data['gender'] }}">
             <input type="submit" value="変更完了" class="mypage-edit-check-button-1">
             <br><br>
             <input type="submit" value="前に戻る" name="back" class="mypage-edit-check-button-2">

@@ -75,7 +75,7 @@
                                 <span class="review-list-result-name">商品コメント</span>
                             </div>
                             <div>
-                                <span>{{ $result->comment }}</span>
+                                <span>{!! nl2br(e($result->comment)) !!}</span>
                             </div>
                         </div>    
                     </div>
