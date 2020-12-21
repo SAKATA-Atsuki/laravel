@@ -22,4 +22,30 @@ class MypageController extends Controller
         Auth::user()->delete();
         return redirect()->route('top');
     }
+
+    public function information(Request $request)
+    {
+        return view('mypage.edit.information');
+    }
+
+    public function informationCheck(Request $request)
+    {
+        $data = $request->all();
+        return view('mypage.edit.check', compact('data'));
+    }
+
+    public function informationStore(Request $request)
+    {
+
+    }
+
+    public function password(Request $request)
+    {
+        return view('mypage.edit.password');
+    }
+
+    public function email(Request $request)
+    {
+        return view('mypage.edit.email');
+    }
 }

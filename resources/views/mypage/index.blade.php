@@ -43,6 +43,9 @@
             </span>
         </div>
     </div>
+    <div class="mypage-index-button-information">
+        <a href="{{ route('mypage.edit.information') }}" class="mypage-index-delete-button-information">会員情報変更</a>
+    </div>
     <div class="mypage-index-member">
         <div class="mypage-index-member-left">
             <span>パスワード</span>
@@ -51,6 +54,9 @@
             <span>セキュリティのため非表示</span>
         </div>
     </div>
+    <div class="mypage-index-button-password">
+        <a href="{{ route('mypage.edit.password') }}" class="mypage-index-delete-button-password">パスワード変更</a>
+    </div>
     <div class="mypage-index-member">
         <div class="mypage-index-member-left">
             <span>メールアドレス</span>
@@ -58,6 +64,9 @@
         <div>
             <span>{{ Auth::user()->email }}</span>
         </div>
+    </div>
+    <div class="mypage-index-button-email">
+        <a href="{{ route('mypage.edit.email') }}" class="mypage-index-delete-button-email">メールアドレス変更</a>
     </div>
     <div class="mypage-index-button">
         <a href="{{ route('mypage.confirm') }}" class="mypage-index-delete-button">退会</a>

@@ -107,17 +107,20 @@ class ProductController extends Controller
 
         if ($request->session()->exists('product_search')) {
             $session_product_search = $request->session()->get('product_search');
+
+            $results = Product::where('product_category_id', $session_product_search['category'])
+                                ->where('product_subcategory_id', $session_product_search['subcategory'])
+                                ->where('name', 'like', '%' . $session_product_search['word'] . '%')
+                                ->where('product_content', 'like', '%' . $session_product_search['word'] . '%')
+                                ->simplePaginate(10);
         } else {
             $session_product_search['category'] = 0;
             $session_product_search['subcategory'] = 0;
             $session_product_search['word'] = '';
+
+            $results = Product::simplePaginate(10);
         }
 
-        $results = Product::where('product_category_id', $session_product_search['category'])
-                            ->where('product_subcategory_id', $session_product_search['subcategory'])
-                            ->where('name', 'like', '%' . $session_product_search['word'] . '%')
-                            ->where('product_content', 'like', '%' . $session_product_search['word'] . '%')
-                            ->simplePaginate(10);
 
         $page = $request->page;
         if ($page == 0) {

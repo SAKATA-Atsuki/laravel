@@ -1913,9 +1913,64 @@ label {
     width: 200px;
 }
 
+.mypage-index-button-information {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mypage-index-delete-button-information {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 59px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.mypage-index-button-password {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mypage-index-delete-button-password {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 48px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.mypage-index-button-email {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.mypage-index-delete-button-email {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 .mypage-index-button {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .mypage-index-delete-button {
@@ -1961,4 +2016,103 @@ label {
     padding: 15px 82px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+/* mypage/edit/information.php -------------------------------------------------- */
+
+.mypage-edit-information-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.mypage-edit-information-content {
+    width: 430px;
+    margin: 0 auto;
+}
+
+.mypage-edit-information-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mypage-edit-information-button-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mypage-edit-information-button-2 {
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border: solid 2px rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 38px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* mypage/edit/check.php -------------------------------------------------- */
+
+.mypage-edit-check-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.mypage-edit-check-content {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mypage-edit-check-content-left {
+    width: 150px;
+}
+
+.mypage-edit-check-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mypage-edit-check-button-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mypage-edit-check-button-2 {
+    outline: none;
+    background: none;
+    color: rgb(237, 125, 50);
+    background-color: white;
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 81.5px;
+    border-radius: 10px;
+    cursor: pointer;
 }

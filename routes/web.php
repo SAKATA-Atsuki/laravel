@@ -42,6 +42,14 @@ Route::post('review/store', 'ReviewController@store')->name('review.store');
 Route::get('review/complete', 'ReviewController@complete')->name('review.complete');
 Route::get('review/list/{pg}/{id}', 'ReviewController@list')->name('review.list');
 
+// mypage
 Route::get('mypage', 'MypageController@index')->name('mypage');
 Route::get('mypage/confirm', 'MypageController@confirm')->name('mypage.confirm');
 Route::get('mypage/delete', 'MypageController@delete')->name('mypage.delete');
+
+// mypage.edit
+Route::get('mypage/edit/information', 'MypageController@information')->name('mypage.edit.information');
+Route::post('mypage/edit/information/check', 'MypageController@informationCheck')->name('mypage.edit.information.check');
+Route::post('mypage/edit/information/store', 'MypageController@informationStore')->name('mypage.edit.information.store');
+Route::get('mypage/edit/password', 'MypageController@password')->name('mypage.edit.password');
+Route::get('mypage/edit/email', 'MypageController@email')->name('mypage.edit.email');
