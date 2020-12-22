@@ -101,7 +101,7 @@ class MypageController extends Controller
         return view('mypage.edit.auth', compact('data'));
     }
 
-    public function emailStore(MemberEditEmailCodeRequest $request)
+    public function emailStore(Request $request)
     {
         return redirect()->route('top');
     }
