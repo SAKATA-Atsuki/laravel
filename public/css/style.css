@@ -2229,7 +2229,7 @@ label {
 }
 
 .mypage-edit-auth-content {
-    width: 700px;
+    width: 650px;
     margin: 0 auto;
     background-color: lightcyan;
 }
@@ -2248,7 +2248,7 @@ label {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 9px 50px;
+    padding: 9px 20px;
     border-radius: 10px;
     cursor: pointer;
 }

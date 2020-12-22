@@ -13,7 +13,7 @@
         <p>（※ メールアドレスの変更はまだ完了していません）<br>
             変更後のメールアドレスにお送りしましたメールに記載されている「認証コード」を入力してください。</p>
         <div>
-            <span>認証コード　　</span>
+            <span>　認証コード　　</span>
             <input type="text" name="code" size="40">
         </div>
         <form action="" method="POST">
