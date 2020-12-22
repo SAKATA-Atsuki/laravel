@@ -27,9 +27,9 @@ class AuthCode implements Rule
     public function passes($attribute, $value)
     {
         if ($value == Auth::user()->auth_code) {
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
 

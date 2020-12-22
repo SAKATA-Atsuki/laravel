@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\AuthCode;
 
 class MemberEditEmailCodeRequest extends FormRequest
 {
@@ -24,14 +25,14 @@ class MemberEditEmailCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'required'
+            'auth_code' => ['required', new AuthCode]
         ];
     }
 
     public function messages()
     {
         return [
-            'code.required' => '※認証コードは必須入力です'
+            'auth_code.required' => '※認証コードは必須入力です'
         ];
     }
 }
