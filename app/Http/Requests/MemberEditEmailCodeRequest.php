@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\AuthCode;
 
 class MemberEditEmailCodeRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class MemberEditEmailCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            'auth_code' => ['required']
+            'auth_code' => ['required', new AuthCode]
         ];
     }
 
