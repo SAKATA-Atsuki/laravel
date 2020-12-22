@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MemberEditInformationRequest;
 use App\Http\Requests\MemberEditPasswordRequest;
 use App\Http\Requests\MemberEditEmailRequest;
+use App\Http\Requests\MemberEditEmailCodeRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -100,8 +101,8 @@ class MypageController extends Controller
         return view('mypage.edit.auth', compact('data'));
     }
 
-    public function emailStore(Request $request)
+    public function emailStore(MemberEditEmailCodeRequest $request)
     {
-        
+        return redirect()->route('top');
     }
 }

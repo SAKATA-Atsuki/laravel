@@ -16,7 +16,7 @@
             <span>　認証コード　　</span>
             <input type="text" name="code" size="40">
         </div>
-        <form action="" method="POST">
+        <form action="{{ route('mypage.edit.email.store') }}" method="POST">
             @csrf
             <div class="mypage-edit-auth-button">
                 <input type="submit" value="認証コードを送信してメールアドレスの変更を完了する" class="mypage-edit-auth-button-1">
