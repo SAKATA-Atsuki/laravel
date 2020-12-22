@@ -25,7 +25,7 @@ class MemberEditEmailCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => ['required']
+            'code' => ['required', new AuthCode]
         ];
     }
 
