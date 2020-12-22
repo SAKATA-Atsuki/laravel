@@ -32,7 +32,7 @@ class MemberEditEmailCodeRequest extends FormRequest
     public function messages()
     {
         return [
-            'auth_code.required' => '※認証コードは必須入力です'
+            'auth_code.required' => '　　　　　　　　　※認証コードは必須入力です'
         ];
     }
 }
