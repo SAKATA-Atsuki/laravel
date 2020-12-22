@@ -2226,17 +2226,17 @@ label {
     font-weight: bold;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 100px;
 }
 
 .mypage-edit-auth-content {
-    width: 600px;
+    width: 70px;
     margin: 0 auto;
     background-color: lightcyan;
 }
 
 .mypage-edit-auth-button {
     text-align: center;
+    margin-top: 50px;
 }
 
 .mypage-edit-auth-button-1 {
@@ -2248,7 +2248,7 @@ label {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 9px 10px;
+    padding: 9px 50px;
     border-radius: 10px;
     cursor: pointer;
 }
