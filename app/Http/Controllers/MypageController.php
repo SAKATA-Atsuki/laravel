@@ -101,7 +101,7 @@ class MypageController extends Controller
         return view('mypage.edit.auth', compact('data'));
     }
 
-    public function emailAuth2(MemberEditEmailRequest $request)
+    public function emailAuth2(Request $request)
     {
         return view('mypage.edit.auth');
     }
