@@ -18,6 +18,9 @@
                 <span>　認証コード　　</span>
                 <input type="text" name="auth_code" size="40">
             </div>
+            @error('auth_code')
+                <p class="error">{{ $message }}</p>
+            @enderror
             <div class="mypage-edit-auth-button">
                 <input type="submit" value="認証コードを送信してメールアドレスの変更を完了する" class="mypage-edit-auth-button-1">
             </div>    
