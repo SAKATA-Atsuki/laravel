@@ -55,3 +55,4 @@ Route::get('mypage/edit/password', 'MypageController@password')->name('mypage.ed
 Route::post('mypage/edit/password/store', 'MypageController@passwordStore')->name('mypage.edit.password.store');
 Route::get('mypage/edit/email', 'MypageController@email')->name('mypage.edit.email');
 Route::post('mypage/edit/email/auth', 'MypageController@emailAuth')->name('mypage.edit.email.auth');
+Route::post('mypage/edit/email/store', 'MypageController@emailStore')->name('mypage.edit.email.store');

@@ -2228,3 +2228,27 @@ label {
     margin-top: 30px;
     margin-bottom: 100px;
 }
+
+.mypage-edit-auth-content {
+    width: 600px;
+    margin: 0 auto;
+    background-color: lightcyan;
+}
+
+.mypage-edit-auth-button {
+    text-align: center;
+}
+
+.mypage-edit-auth-button-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(237, 125, 50);
+    border-color: rgb(237, 125, 50);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}

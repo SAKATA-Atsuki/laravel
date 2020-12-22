@@ -9,5 +9,19 @@
 </head>
 <body>
     <p class="mypage-edit-auth-title">メールアドレス変更　認証コード入力</p>
+    <div class="mypage-edit-auth-content">
+        <p>（※ メールアドレスの変更はまだ完了していません）<br>
+            変更後のメールアドレスにお送りしましたメールに記載されている「認証コード」を入力してください。</p>
+        <div>
+            <span>認証コード　　</span>
+            <input type="text" name="code" size="40">
+        </div>
+        <form action="" method="POST">
+            @csrf
+            <div class="mypage-edit-auth-button">
+                <input type="submit" value="認証コードを送信してメールアドレスの変更を完了する" class="mypage-edit-auth-button-1">
+            </div>    
+        </form>
+    </div>
 </body>
 </html>

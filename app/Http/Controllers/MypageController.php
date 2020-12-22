@@ -97,6 +97,11 @@ class MypageController extends Controller
         $member->auth_code = $code;
         $member->save();
 
-        return view('mypage.edit.auth');
+        return view('mypage.edit.auth', compact('data'));
+    }
+
+    public function emailStore(Request $request)
+    {
+        
     }
 }
