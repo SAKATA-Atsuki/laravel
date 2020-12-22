@@ -84,6 +84,7 @@ class MypageController extends Controller
     public function emailAuth(MemberEditEmailRequest $request)
     {
         $data = $request->all();
+        $request->session()->put('email', $data['email']);
 
         $code = (int) str_pad(mt_Rand(0, 999999), 6, '0', STR_PAD_LEFT);
         $members = Member::where('auth_code', $code)->get();
@@ -98,16 +99,25 @@ class MypageController extends Controller
         $member->auth_code = $code;
         $member->save();
 
-        return view('mypage.edit.auth', compact('data'));
+        return view('mypage.edit.auth');
     }
 
     public function emailAuth2(Request $request)
     {
+        $data = $request->all();
         return view('mypage.edit.auth');
     }
 
     public function emailStore(MemberEditEmailCodeRequest $request)
     {
+        $session_email = $request->session()->get('email');
+
+        $member = Auth::user();
+        $member->email = $session_email;
+        $member->save();
+
+        $request->session()->forget('email');
+
         return redirect()->route('top');
     }
 }
