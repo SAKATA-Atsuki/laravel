@@ -118,6 +118,6 @@ class MypageController extends Controller
 
         $request->session()->forget('email');
 
-        return redirect()->route('top');
+        return redirect()->route('mypage');
     }
 }
