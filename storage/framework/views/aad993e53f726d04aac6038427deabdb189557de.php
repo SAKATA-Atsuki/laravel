@@ -356,6 +356,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
             <div class="button-register-product">
+                <input type="hidden" name="topOrList" value="<?php echo e($topOrList); ?>">
                 <input type="submit" value="確認画面へ" class="button-register-product-1">
                 <br>
                 <?php if($topOrList): ?>
