@@ -10,6 +10,7 @@ use App\Http\Requests\MemberEditInformationRequest;
 use App\Http\Requests\MemberEditPasswordRequest;
 use App\Http\Requests\MemberEditEmailRequest;
 use App\Http\Requests\MemberEditEmailCodeRequest;
+use App\Http\Requests\ReviewEditRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -156,7 +157,7 @@ class MypageController extends Controller
         return view('mypage.review.edit', compact('page', 'product', 'star', 'review'));
     }
 
-    public function reviewCheck(Request $request)
+    public function reviewCheck(ReviewEditRequest $request)
     {
         $data = $request->all();
         $product = Product::find($data['product_id']);

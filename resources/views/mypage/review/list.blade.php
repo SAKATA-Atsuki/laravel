@@ -51,7 +51,11 @@
                             <span>★★★★★ {{ $review->evaluation }}</span>
                         @endif
                         <br>
-                        <span>{{ $review->comment }}</span>
+                        @if (mb_strlen($review->comment) > 15)
+                            <span>{{ mb_substr($review->comment, 0, 15) }}…</span>
+                        @else
+                            <span>{{ $review->comment }}</span>
+                        @endif
                     </div>
                     <div class="button-mypage-review-list">
                         <a href="{{ route('mypage.review.edit', ['page' => $page, 'review_id' => $review->id, 'product_id' => $review->product_id]) }}" class="button-mypage-review-list-1">レビュー編集</a>

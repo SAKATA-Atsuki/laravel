@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Member extends Authenticatable
 {
-    //
     use Notifiable;
     use SoftDeletes;
 
