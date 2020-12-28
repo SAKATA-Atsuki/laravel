@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\Product;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use App\Http\Requests\MemberEditInformationRequest;
 use App\Http\Requests\MemberEditPasswordRequest;
@@ -119,5 +121,97 @@ class MypageController extends Controller
         $request->session()->forget('email');
 
         return redirect()->route('mypage');
+    }
+
+    public function reviewList(Request $request)
+    {
+        $reviews = Review::where('member_id', Auth::user()->id)->simplePaginate(5);
+
+        $page = $request->page;
+        if ($page == 0) {
+            $page = 1;
+        }
+
+        return view('mypage.review.list', compact('reviews', 'page'));
+    }
+
+    public function reviewEdit(Request $request)
+    {
+        $page = $request->page;
+        $product = Product::find($request->product_id);
+        $reviews = Review::where('product_id', $request->product_id)->get();
+
+        if (count($reviews)) {
+            $evaluation = 0;
+            foreach ($reviews as $review) {
+                $evaluation += $review->evaluation;
+            }
+            $star = ceil($evaluation / count($reviews));
+        } else {
+            $star = 0;
+        }
+
+        $review = Review::find($request->review_id);
+
+        return view('mypage.review.edit', compact('page', 'product', 'star', 'review'));
+    }
+
+    public function reviewCheck(Request $request)
+    {
+        $data = $request->all();
+        $product = Product::find($data['product_id']);
+
+        return view('mypage.review.check', compact('data', 'product'));
+    }
+
+    public function reviewStore(Request $request)
+    {
+        $data = $request->all();
+
+        if ($request->has('back')) {
+            return redirect()->route('mypage.review.edit', ['page' => $data['page'], 'review_id' => $data['review_id'], 'product_id' => $data['product_id']])->withInput($data);
+        } else {
+            $review = Review::find($data['review_id']);
+            $review->evaluation = $data['evaluation'];
+            $review->comment = $data['comment'];
+            $review->save();
+
+            return redirect()->route('mypage.review.list');
+        }
+    }
+
+    public function reviewDeleteCheck(Request $request)
+    {
+        $page = $request->page;
+        $product = Product::find($request->product_id);
+        $reviews = Review::where('product_id', $request->product_id)->get();
+
+        if (count($reviews)) {
+            $evaluation = 0;
+            foreach ($reviews as $review) {
+                $evaluation += $review->evaluation;
+            }
+            $star = ceil($evaluation / count($reviews));
+        } else {
+            $star = 0;
+        }
+
+        $review = Review::find($request->review_id);
+
+        return view('mypage.review.delete', compact('page', 'product', 'star', 'review'));
+    }
+
+    public function reviewDelete(Request $request)
+    {
+        $data = $request->all();
+
+        if ($request->has('back')) {
+            return redirect()->route('mypage.review.list', ['page' => $data['page']]);
+        } else {
+            $review = Review::find($data['review_id']);
+            $review->delete();
+
+            return redirect()->route('mypage.review.list');
+        }
     }
 }

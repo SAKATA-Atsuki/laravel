@@ -1967,6 +1967,24 @@ label {
     text-decoration: none;
 }
 
+.mypage-index-button-review {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.mypage-index-delete-button-review {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 37px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 .mypage-index-button {
     text-align: center;
     margin-top: 50px;
@@ -2249,5 +2267,81 @@ label {
     letter-spacing: 1px;
     padding: 9px 20px;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+/* mypage/review/list.php -------------------------------------------------- */
+
+.mypage-review-list {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.button-mypage-review-list {
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.button-mypage-review-list-1 {
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border: solid 2px rgb(47, 82, 143);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.mypage-review-list-button {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.mypage-review-list-button-1 {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 38px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* mypage/review/edit.php -------------------------------------------------- */
+
+.button-mypage-review-edit {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* mypage/review/delete.php -------------------------------------------------- */
+
+.button-mypage-review-delete {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     cursor: pointer;
 }

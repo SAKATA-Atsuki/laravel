@@ -26,7 +26,7 @@ class CreateProductsTable extends Migration
             $table->text('product_content')->comment('商品説明');
             $table->timestamp('created_at')->nullable($value = true)->comment('登録日時');
             $table->timestamp('updated_at')->nullable($value = true)->comment('編集日時');
-            $table->timestamp('deleted_at')->nullable($value = true)->comment('削除日時');
+            $table->softDeletes()->comment('削除日時');
         });
     }
 

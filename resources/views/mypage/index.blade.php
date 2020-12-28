@@ -68,6 +68,9 @@
     <div class="mypage-index-button-email">
         <a href="{{ route('mypage.edit.email') }}" class="mypage-index-delete-button-email">メールアドレス変更</a>
     </div>
+    <div class="mypage-index-button-review">
+        <a href="{{ route('mypage.review.list') }}" class="mypage-index-delete-button-review">商品レビュー管理</a>
+    </div>
     <div class="mypage-index-button">
         <a href="{{ route('mypage.confirm') }}" class="mypage-index-delete-button">退会</a>
     </div>

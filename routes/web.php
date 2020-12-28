@@ -57,3 +57,11 @@ Route::get('mypage/edit/email', 'MypageController@email')->name('mypage.edit.ema
 Route::post('mypage/edit/email/auth', 'MypageController@emailAuth')->name('mypage.edit.email.auth');
 Route::get('mypage/edit/email/auth', 'MypageController@emailAuth2')->name('mypage.edit.email.auth');
 Route::post('mypage/edit/email/store', 'MypageController@emailStore')->name('mypage.edit.email.store');
+
+// mypage.review
+Route::get('mypage/review/list', 'MypageController@reviewList')->name('mypage.review.list');
+Route::get('mypage/review/edit', 'MypageController@reviewEdit')->name('mypage.review.edit');
+Route::post('mypage/review/check', 'MypageController@reviewCheck')->name('mypage.review.check');
+Route::post('mypage/review/store', 'MypageController@reviewStore')->name('mypage.review.store');
+Route::get('mypage/review/delete', 'MypageController@reviewDeleteCheck')->name('mypage.review.delete');
+Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypage.review.delete');
