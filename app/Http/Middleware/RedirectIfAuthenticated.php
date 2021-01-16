@@ -18,8 +18,16 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
+        // 元々
+        // if (Auth::guard($guard)->check()) {
+        //     return redirect()->route('top');
+        // }
+
+        // 変更
+        if (Auth::guard($guard)->check() && $guard === 'member') {
             return redirect()->route('top');
+        } else if (Auth::guard($guard)->check() && $guard === 'administer') {
+            return redirect()->route('admin');
         }
 
         return $next($request);

@@ -787,6 +787,7 @@ body {
     padding: 5px 40px;
     margin-top: 90px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .admin-login-footer {
@@ -2344,4 +2345,10 @@ label {
     border-radius: 10px;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+/* admin/login.php -------------------------------------------------- */
+
+#admin {
+    background-color: rgb(221, 234, 247);
 }

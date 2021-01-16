@@ -65,3 +65,6 @@ Route::post('mypage/review/check', 'MypageController@reviewCheck')->name('mypage
 Route::post('mypage/review/store', 'MypageController@reviewStore')->name('mypage.review.store');
 Route::get('mypage/review/delete', 'MypageController@reviewDeleteCheck')->name('mypage.review.delete');
 Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypage.review.delete');
+
+// admin
+Route::get('admin', 'AdminController@index')->name('admin');

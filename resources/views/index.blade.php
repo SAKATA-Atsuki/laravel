@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    @if (Auth::check())
+    @if (Auth::guard('member')->check())
         <div id="top-head-2">
-            <span class="welcome">ようこそ{{ Auth::user()->name_sei }}　{{ Auth::user()->name_mei }}様</span>
+            <span class="welcome">ようこそ{{ Auth::guard('member')->user()->name_sei }}　{{ Auth::guard('member')->user()->name_mei }}様</span>
             <div>
                 <a href="{{ route('product.list') }}" class="button-top-left-2">商品一覧</a>
                 <a href="{{ route('product.register') }}" class="button-top-center-2">新規商品登録</a>
