@@ -11,12 +11,11 @@
     <div class="admin-index-header">
         <span class="admin-title">管理画面メインメニュー</span>
         <div>
-            <span class="admin-welcome">ようこそさん</span>
-            <a href="logout.php" class="admin-index-header-button">ログアウト</a>
+            <span class="admin-welcome">ようこそ<?php echo e(Auth::guard('administer')->user()->name_sei . Auth::guard('administer')->user()->name_mei); ?>さん</span>
+            <a href="<?php echo e(route('admin.logout')); ?>" class="admin-index-header-button">ログアウト</a>
         </div>
     </div>
     <div class="admin-index-main">
-        <a href="member.php" class="admin-index-main-member">会員一覧</a>
     </div>
 </body>
 </html><?php /**PATH /Applications/MAMP/htdocs/laravelbbs/resources/views/admin/index.blade.php ENDPATH**/ ?>

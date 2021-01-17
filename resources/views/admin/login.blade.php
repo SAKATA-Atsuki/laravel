@@ -17,21 +17,15 @@
             @csrf
             <div class="admin-login-main-bottom">
                 <span>ログインID</span>
-                <input type="text" name="login_id" size="50" maxlength="255" value="{{ old('login_id') }}">
+                <input type="text" name="email" size="50" maxlength="255" value="{{ old('email') }}">
             </div>
-            @error('login_id')
-                <p class="error">{{ $message }}</p>
-            @enderror
             <div class="admin-login-main-bottom">
                 <span>パスワード</span>
                 <input type="password" name="password" size="50" maxlength="255" value="">
             </div>
-            @error('password')
-                <p class="error">{{ $message }}</p>
-            @enderror
-            @error('auth')
-                <p class="error">{{ $message }}</p>
-            @enderror
+            @if (count($errors) > 0)
+                <p class="error">※IDもしくはパスワードが間違っています</p>
+            @endif
             <div class="button"><input type="submit" value="ログイン" class="admin-login-button"></div>
         </form>
     </div>

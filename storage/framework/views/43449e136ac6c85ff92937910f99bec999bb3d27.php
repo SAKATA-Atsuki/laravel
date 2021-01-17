@@ -17,42 +17,15 @@
             <?php echo csrf_field(); ?>
             <div class="admin-login-main-bottom">
                 <span>ログインID</span>
-                <input type="text" name="login_id" size="50" maxlength="255" value="<?php echo e(old('login_id')); ?>">
+                <input type="text" name="email" size="50" maxlength="255" value="<?php echo e(old('email')); ?>">
             </div>
-            <?php $__errorArgs = ['login_id'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                <p class="error"><?php echo e($message); ?></p>
-            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
             <div class="admin-login-main-bottom">
                 <span>パスワード</span>
                 <input type="password" name="password" size="50" maxlength="255" value="">
             </div>
-            <?php $__errorArgs = ['password'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                <p class="error"><?php echo e($message); ?></p>
-            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-            <?php $__errorArgs = ['auth'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                <p class="error"><?php echo e($message); ?></p>
-            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
+            <?php if(count($errors) > 0): ?>
+                <p class="error">※IDもしくはパスワードが間違っています</p>
+            <?php endif; ?>
             <div class="button"><input type="submit" value="ログイン" class="admin-login-button"></div>
         </form>
     </div>

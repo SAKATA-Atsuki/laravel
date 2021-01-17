@@ -3,7 +3,6 @@
 namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\AdministerRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
@@ -19,11 +18,6 @@ trait AuthenticatesUsers
     public function showLoginForm()
     {
         return view('auth.login');
-    }
-
-    public function showAdminLoginForm()
-    {
-        return view('admin.login');
     }
 
     /**
@@ -60,17 +54,6 @@ trait AuthenticatesUsers
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
-    }
-
-    public function adminLogin(AdministerRequest $request)
-    {
-        if (Auth::guard('administer')->attempt($request->only('login_id', 'password'), $request->filled('remember'))) {
-            return $this->sendAdminLoginResponse($request);
-        }
-
-        // $this->incrementLoginAttempts($request);
-
-        return $this->sendFailedAdminLoginResponse($request);
     }
 
     /**
@@ -129,16 +112,6 @@ trait AuthenticatesUsers
                 ?: redirect()->intended($this->redirectPath());
     }
 
-    protected function sendAdminLoginResponse(Request $request)
-    {
-        $request->session()->regenerate();
-
-        $this->clearLoginAttempts($request);
-
-        return $this->authenticated($request, Auth::guard('administer')->user())
-                ?: redirect()->intended($this->redirectPath());
-    }
-
     /**
      * The user has been authenticated.
      *
@@ -163,13 +136,6 @@ trait AuthenticatesUsers
     {
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],
-        ]);
-    }
-
-    protected function sendFailedAdminLoginResponse(Request $request)
-    {
-        throw ValidationException::withMessages([
-            'auth' => ['※IDもしくはパスワードが間違っています'],
         ]);
     }
 
@@ -218,6 +184,6 @@ trait AuthenticatesUsers
      */
     protected function guard()
     {
-        return Auth::guard('member');
+        return Auth::guard();
     }
 }
