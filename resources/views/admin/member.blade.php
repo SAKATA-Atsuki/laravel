@@ -86,7 +86,7 @@
                             @if ($members->onFirstPage())
                                 <span class="admin-member-main-page-left-off"></span>
                             @else
-                                <a href="{{ $members->previousPageUrl() }}" class="admin-member-main-page-prev">前へ＞</a>
+                                <a href="{{ $members->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-prev">前へ＞</a>
                                 <a href="{{ $members->previousPageUrl() }}" class="admin-member-main-page-left-on">{{ $members->currentPage() - 1 }}</a>
                             @endif
                             <span class="admin-member-main-page-center">{{ $members->currentPage() }}</span>
