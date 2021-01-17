@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
 </head>
 <body>
-    <?php if(Auth::check()): ?>
+    <?php if(Auth::guard('member')->check()): ?>
         <div id="top-head-2">
-            <span class="welcome">ようこそ<?php echo e(Auth::user()->name_sei); ?>　<?php echo e(Auth::user()->name_mei); ?>様</span>
+            <span class="welcome">ようこそ<?php echo e(Auth::guard('member')->user()->name_sei); ?>　<?php echo e(Auth::guard('member')->user()->name_mei); ?>様</span>
             <div>
                 <a href="<?php echo e(route('product.list')); ?>" class="button-top-left-2">商品一覧</a>
                 <a href="<?php echo e(route('product.register')); ?>" class="button-top-center-2">新規商品登録</a>
