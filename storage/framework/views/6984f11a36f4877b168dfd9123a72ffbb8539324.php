@@ -16,6 +16,7 @@
         </div>
     </div>
     <div class="admin-index-main">
+        <a href="<?php echo e(route('admin.member')); ?>" class="admin-index-main-member">会員一覧</a>
     </div>
 </body>
 </html><?php /**PATH /Applications/MAMP/htdocs/laravelbbs/resources/views/admin/index.blade.php ENDPATH**/ ?>

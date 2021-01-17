@@ -13,7 +13,7 @@ class Member extends Authenticatable
     use Notifiable;
     use SoftDeletes;
 
-    // protected $guarded = array('id');
+    protected $guarded = array('id');
 
     public function sendPasswordResetNotification($token)
     {

@@ -68,3 +68,5 @@ Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypa
 
 // admin
 Route::get('admin', 'AdminController@index')->name('admin')->middleware('auth:administer');
+Route::get('admin/member', 'AdminController@member')->name('admin.member')->middleware('auth:administer');
+Route::post('admin/member', 'AdminController@member')->name('admin.member')->middleware('auth:administer');

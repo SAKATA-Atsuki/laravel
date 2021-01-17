@@ -16,6 +16,7 @@
         </div>
     </div>
     <div class="admin-index-main">
+        <a href="{{ route('admin.member') }}" class="admin-index-main-member">会員一覧</a>
     </div>
 </body>
 </html>
