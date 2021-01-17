@@ -1992,7 +1992,7 @@ label {
 
 .admin-member-main-result-top {
     display: flex;
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     border-top: solid 2px black;
     border-left: solid 2px black;
@@ -2010,7 +2010,7 @@ label {
 .admin-member-main-result-top-name {
     background-color: rgb(217, 217, 217);
     text-align: center;
-    width: 150px;
+    width: 200px;
     border-right: dotted 1px black;
 }
 
@@ -2024,7 +2024,7 @@ label {
 .admin-member-main-result-top-email {
     background-color: rgb(217, 217, 217);
     text-align: center;
-    width: 250px;
+    width: 300px;
     border-right: dotted 1px black;
 }
 
@@ -2055,7 +2055,7 @@ label {
 .admin-member-main-result-main {
     background-color: white;
     display: flex;
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     border-left: solid 2px black;
     border-right: solid 2px black;
@@ -2070,7 +2070,7 @@ label {
 
 .admin-member-main-result-main-name {
     text-align: center;
-    width: 150px;
+    width: 200px;
     text-decoration: none;
     border-right: dotted 1px black;
 }
@@ -2083,7 +2083,7 @@ label {
 
 .admin-member-main-result-main-email {
     text-align: center;
-    width: 250px;
+    width: 300px;
     border-right: dotted 1px black;
 }
 
@@ -2107,7 +2107,7 @@ label {
 }
 
 .admin-member-main-page {
-    width: 804px;
+    width: 904px;
     margin: 0 auto;
     border-top: solid 2px black;
     margin-top: -2px;
