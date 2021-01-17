@@ -87,12 +87,12 @@
                                 <span class="admin-member-main-page-left-off"></span>
                             @else
                                 <a href="{{ $members->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-prev">前へ＞</a>
-                                <a href="{{ $members->previousPageUrl() }}" class="admin-member-main-page-left-on">{{ $members->currentPage() - 1 }}</a>
+                                <a href="{{ $members->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-left-on">{{ $members->currentPage() - 1 }}</a>
                             @endif
                             <span class="admin-member-main-page-center">{{ $members->currentPage() }}</span>
                             @if ($members->hasMorePages())
-                                <a href="{{ $members->nextPageUrl() }}" class="admin-member-main-page-right-on">{{ $members->currentPage() + 1 }}</a>
-                                <a href="{{ $members->nextPageUrl() }}" class="admin-member-main-page-next">次へ＞</a>
+                                <a href="{{ $members->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-right-on">{{ $members->currentPage() + 1 }}</a>
+                                <a href="{{ $members->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-next">次へ＞</a>
                             @else
                                 <span class="admin-member-main-page-right-off"></span>
                             @endif
