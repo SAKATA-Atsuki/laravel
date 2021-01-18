@@ -25,7 +25,7 @@ class AdminMemberEditRequest extends FormRequest
      */
     public function rules()
     {
-        if ($this->password1 == '') {
+        if ($this->password1 == '' && $this->password2 == '') {
             return [
                 'name_sei' => 'required|max:20',
                 'name_mei' => 'required|max:20',
