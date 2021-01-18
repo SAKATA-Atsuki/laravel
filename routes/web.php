@@ -68,5 +68,19 @@ Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypa
 
 // admin
 Route::get('admin', 'AdminController@index')->name('admin')->middleware('auth:administer');
-Route::get('admin/member', 'AdminController@member')->name('admin.member')->middleware('auth:administer');
-Route::post('admin/member', 'AdminController@member')->name('admin.member')->middleware('auth:administer');
+
+Route::get('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
+Route::post('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
+
+Route::get('admin/member/register', 'AdminController@getMemberRegister')->name('admin.member.register')->middleware('auth:administer');
+Route::post('admin/member/register', 'AdminController@postMemberRegister')->name('admin.member.register')->middleware('auth:administer');
+Route::get('admin/member/register/check', 'AdminController@memberRegisterCheck')->name('admin.member.register.check')->middleware('auth:administer');
+Route::post('admin/member/register/store', 'AdminController@memberRegisterStore')->name('admin.member.register.store')->middleware('auth:administer');
+
+Route::get('admin/member/edit', 'AdminController@getMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
+Route::post('admin/member/edit', 'AdminController@postMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
+Route::get('admin/member/edit/check', 'AdminController@memberEditCheck')->name('admin.member.edit.check')->middleware('auth:administer');
+Route::post('admin/member/edit/store', 'AdminController@memberEditStore')->name('admin.member.edit.store')->middleware('auth:administer');
+
+Route::get('admin/member/detail', 'AdminController@memberDetail')->name('admin.member.detail')->middleware('auth:administer');
+Route::get('admin/member/detail/delete', 'AdminController@memberDetailDelete')->name('admin.member.detail.delete')->middleware('auth:administer');

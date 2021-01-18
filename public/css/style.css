@@ -2181,9 +2181,8 @@ label {
     margin-left: 20px;
 }
 
-/* admin/join.php -------------------------------------------------- */
-
-.admin-join-header-button {
+/* admin/register.php -------------------------------------------------- */
+.admin-register-header-button {
     color: black;
     border: solid 2px black;
     font-size: 20px;
@@ -2193,7 +2192,7 @@ label {
     margin-right: 20px;
 }
 
-.admin-join-main {
+#admin-register {
     width: 430px;
     margin: 0 auto;
     font-size: 20px;
@@ -2201,23 +2200,34 @@ label {
     margin-bottom: 30px;
 }
 
-.admin-join-main-id {
+.admin-register-id {
+    margin-bottom: 20px;
+}
+
+.admin-register-id-right {
     margin-left: 29.5px;
 }
 
-.admin-join-main-button {
+.admin-register-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-admin-register {
+    outline: none;
+    background: none;
     color: rgb(68, 114, 196);
     background-color: white;
     border-color: rgb(68, 114, 196);
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 10px 45px;
+    padding: 9px 40px;
     border-radius: 10px;
-    margin-top: 25px;
+    cursor: pointer;
 }
 
-/* admin/check_join.php -------------------------------------------------- */
+/* admin/check.php -------------------------------------------------- */
 
 .admin-check-main {
     width: 430px;
@@ -2228,26 +2238,19 @@ label {
 }
 
 .admin-check-button {
-    color: rgb(68, 114, 196);
-    background-color: white;
-    border-color: rgb(68, 114, 196);
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px 55px;
-    border-radius: 10px;
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 45px;
 }
 
 /* admin/detail.php -------------------------------------------------- */
 
-.admin-detail-button {
+.admin-member-detail-button {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.admin-detail-button-left {
+.admin-member-detail-button-left {
     color: rgb(68, 114, 196);
     background-color: white;
     border: solid 2px rgb(68, 114, 196);
@@ -2260,7 +2263,7 @@ label {
     margin-right: 10px;
 }
 
-.admin-detail-button-right {
+.admin-member-detail-button-right {
     color: rgb(68, 114, 196);
     background-color: white;
     border: solid 2px rgb(68, 114, 196);
