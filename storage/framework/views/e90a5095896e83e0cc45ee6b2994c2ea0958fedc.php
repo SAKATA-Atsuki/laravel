@@ -71,12 +71,11 @@
                 <select name="subcategory" class="subcategory">
                     <?php if($session_product_search['subcategory'] == 0): ?>
                         <option value="0">----------------</option>
-                    <?php endif; ?>
-                    <?php $__currentLoopData = $subcategories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <?php if(($session_product_search['category'] - 1) * 5 + 1 <= $subcategory->id && $subcategory->id <= ($session_product_search['category'] - 1) * 5 + 5): ?>
+                    <?php else: ?>
+                        <?php $__currentLoopData = $subcategories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <option value="<?php echo e($subcategory->id); ?>" <?php if($session_product_search['subcategory'] == $subcategory->id): ?> selected <?php endif; ?>><?php echo e($subcategory->name); ?></option>
-                        <?php endif; ?>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endif; ?>
                 </select>
             </div>
             <br>

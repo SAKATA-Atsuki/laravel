@@ -69,6 +69,7 @@ Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypa
 // admin
 Route::get('admin', 'AdminController@index')->name('admin')->middleware('auth:administer');
 
+// admin.member
 Route::get('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
 Route::post('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
 
@@ -84,3 +85,7 @@ Route::post('admin/member/edit/store', 'AdminController@memberEditStore')->name(
 
 Route::get('admin/member/detail', 'AdminController@memberDetail')->name('admin.member.detail')->middleware('auth:administer');
 Route::get('admin/member/detail/delete', 'AdminController@memberDetailDelete')->name('admin.member.detail.delete')->middleware('auth:administer');
+
+// admin.category
+Route::get('admin/category', 'AdminController@categoryIndex')->name('admin.category')->middleware('auth:administer');
+Route::post('admin/category', 'AdminController@categoryIndex')->name('admin.category')->middleware('auth:administer');

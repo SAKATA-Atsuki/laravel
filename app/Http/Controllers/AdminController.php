@@ -6,24 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MemberRequest;
 use App\Http\Requests\AdminMemberEditRequest;
 use App\Models\Member;
+use App\Models\Product_category;
+use App\Models\Product_subcategory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Auth\Events\Registered;
 
 class AdminController extends Controller
 {
-    protected function memberRegisterCreate(array $data)
-    {
-        return Member::create([
-            'name_sei' => $data['name_sei'],
-            'name_mei' => $data['name_mei'],
-            'nickname' => $data['nickname'],
-            'gender' => $data['gender'],
-            'password' => Hash::make($data['password1']),
-            'email' => $data['email']    
-        ]);
-    }
-
     public function index(Request $request)
     {
         return view('admin.index');
@@ -56,12 +46,20 @@ class AdminController extends Controller
         if ($order == 1) {
             $members = Member::where('id', 'like', '%' . $request->id . '%')
                                 ->where('gender', 'like', '%' . $request->gender . '%')
-                                ->where('nickname', 'like', '%' . $request->free . '%')
+                                ->where(function ($query) use($request) {
+                                    $query->where('name_sei', 'like', '%' . $request->free . '%')
+                                            ->orWhere('name_mei', 'like', '%' . $request->free . '%')
+                                            ->orWhere('email', 'like', '%' . $request->free . '%');
+                                })
                                 ->simplePaginate(10);
         } else {
             $members = Member::where('id', 'like', '%' . $request->id . '%')
                                 ->where('gender', 'like', '%' . $request->gender . '%')
-                                ->where('nickname', 'like', '%' . $request->free . '%')
+                                ->where(function ($query) use($request) {
+                                    $query->where('name_sei', 'like', '%' . $request->free . '%')
+                                            ->orWhere('name_mei', 'like', '%' . $request->free . '%')
+                                            ->orWhere('email', 'like', '%' . $request->free . '%');
+                                })
                                 ->orderBy('id', 'desc')
                                 ->simplePaginate(10);
         }
@@ -99,6 +97,18 @@ class AdminController extends Controller
         event(new Registered($user = $this->memberRegisterCreate($session_register))); // DBに保存
 
         return redirect()->route('admin.member');
+    }
+
+    protected function memberRegisterCreate(array $data)
+    {
+        return Member::create([
+            'name_sei' => $data['name_sei'],
+            'name_mei' => $data['name_mei'],
+            'nickname' => $data['nickname'],
+            'gender' => $data['gender'],
+            'password' => Hash::make($data['password1']),
+            'email' => $data['email']    
+        ]);
     }
 
     public function getMemberEdit(Request $request)
@@ -150,5 +160,45 @@ class AdminController extends Controller
         Member::find($request->id)->delete();
 
         return redirect()->route('admin.member');
+    }
+
+    public function categoryIndex(Request $request)
+    {
+        $data = $request->all();
+
+        if (isset($data['id'])) {
+        } else {
+            $data['id'] = '';
+        }
+        if (isset($data['free'])) {
+        } else {
+            $data['free'] = '';
+        }
+
+
+        if ($request->order) {
+            $order = $request->order;
+        } else {
+            $order = 1;
+        }
+
+        if ($order == 1) {
+            $categorys = Product_category::where('id', 'like', '%' . $request->id . '%')
+                                            ->where('name', 'like', '%' . $request->free . '%')
+                                            ->simplePaginate(10);
+        } else {
+            $categorys = Product_category::where('id', 'like', '%' . $request->id . '%')
+                                            ->where('name', 'like', '%' . $request->free . '%')
+                                            ->orderBy('id', 'desc')
+                                            ->simplePaginate(10);
+        }
+
+        if ($request->page) {
+            $page = $request->page;
+        } else {
+            $page = 1;
+        }
+
+        return view('admin.category.index', compact('data', 'order', 'categorys', 'page'));
     }
 }

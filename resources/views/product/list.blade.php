@@ -71,12 +71,11 @@
                 <select name="subcategory" class="subcategory">
                     @if ($session_product_search['subcategory'] == 0)
                         <option value="0">----------------</option>
-                    @endif
-                    @foreach ($subcategories as $subcategory)
-                        @if (($session_product_search['category'] - 1) * 5 + 1 <= $subcategory->id && $subcategory->id <= ($session_product_search['category'] - 1) * 5 + 5)
+                    @else
+                        @foreach ($subcategories as $subcategory)
                             <option value="{{ $subcategory->id }}" @if ($session_product_search['subcategory'] == $subcategory->id) selected @endif>{{ $subcategory->name }}</option>
-                        @endif
-                    @endforeach    
+                        @endforeach
+                    @endif
                 </select>
             </div>
             <br>

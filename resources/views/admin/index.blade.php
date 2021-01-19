@@ -17,6 +17,8 @@
     </div>
     <div class="admin-index-main">
         <a href="{{ route('admin.member') }}" class="admin-index-main-member">会員一覧</a>
+        <p>　</p>
+        <a href="{{ route('admin.category') }}" class="admin-index-main-category">商品カテゴリ一覧</a>
     </div>
 </body>
 </html>

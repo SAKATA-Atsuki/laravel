@@ -1849,6 +1849,19 @@ label {
     text-decoration: none;
 }
 
+.admin-index-main-category {
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border: solid 2px rgb(68, 114, 196);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 38px;
+    border-radius: 10px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
 /* admin/member.php -------------------------------------------------- */
 
 .admin-member-header-button {
@@ -2273,4 +2286,97 @@ label {
     padding: 15px 70px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+/* admin/category.php -------------------------------------------------- */
+.admin-category-main-result-top {
+    display: flex;
+    width: 650px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-category-main-result-top-id {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-top-category {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 300px;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-top-created_at {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 200px;
+    border-right: solid 2px black;
+}
+
+.admin-category-main-result-top-edit {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-top-detail {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+}
+
+.admin-category-main-result-main {
+    background-color: white;
+    display: flex;
+    width: 650px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: dotted 1px black;
+}
+
+.admin-category-main-result-main-id {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-main-category {
+    text-align: center;
+    width: 300px;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-main-created_at {
+    text-align: center;
+    width: 200px;
+    border-right: solid 2px black;
+}
+
+.admin-category-main-result-main-edit {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-category-main-result-main-detail {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+}
+
+.admin-category-main-page {
+    width: 654px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    margin-top: -2px;
 }

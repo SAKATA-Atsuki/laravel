@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function register(Request $request)
     {
         $categories = Product_category::all();
-        $subcategories = Product_subcategory::all();
+        $subcategories = Product_subcategory::where('product_category_id', old('category'))->get();
         $topOrList = 0;
         return view('product.register', compact('categories', 'subcategories', 'topOrList'));
     }
@@ -24,7 +24,7 @@ class ProductController extends Controller
     {
         $request->session()->forget('product_search');
         $categories = Product_category::all();
-        $subcategories = Product_subcategory::all();
+        $subcategories = Product_subcategory::where('product_category_id', old('category'))->get();
         $topOrList = 1;
         return view('product.register', compact('categories', 'subcategories', 'topOrList'));
     }
@@ -106,9 +106,6 @@ class ProductController extends Controller
 
     public function list(Request $request)
     {
-        $categories = Product_category::all();
-        $subcategories = Product_subcategory::all();
-
         if ($request->session()->exists('product_search')) {
             $session_product_search = $request->session()->get('product_search');
 
@@ -125,6 +122,8 @@ class ProductController extends Controller
             $results = Product::simplePaginate(10);
         }
 
+        $categories = Product_category::all();
+        $subcategories = Product_subcategory::where('product_category_id', $session_product_search['category'])->get();
 
         $page = $request->page;
         if ($page == 0) {

@@ -246,12 +246,11 @@
                 <select name="subcategory" class="subcategory">
                     @if (old('subcategory') == 0)
                         <option value="0">----------------</option>
-                    @endif
-                    @foreach ($subcategories as $subcategory)
-                        @if ((old('category') - 1) * 5 + 1 <= $subcategory->id && $subcategory->id <= (old('category') - 1) * 5 + 5)
+                    @else
+                        @foreach ($subcategories as $subcategory)
                             <option value="{{ $subcategory->id }}" @if (old('subcategory') == $subcategory->id) selected @endif>{{ $subcategory->name }}</option>
-                        @endif
-                    @endforeach    
+                        @endforeach    
+                    @endif
                 </select>
             </div>
             @error('category')

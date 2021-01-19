@@ -253,12 +253,11 @@ unset($__errorArgs, $__bag); ?>
                 <select name="subcategory" class="subcategory">
                     <?php if(old('subcategory') == 0): ?>
                         <option value="0">----------------</option>
-                    <?php endif; ?>
-                    <?php $__currentLoopData = $subcategories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <?php if((old('category') - 1) * 5 + 1 <= $subcategory->id && $subcategory->id <= (old('category') - 1) * 5 + 5): ?>
+                    <?php else: ?>
+                        <?php $__currentLoopData = $subcategories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <option value="<?php echo e($subcategory->id); ?>" <?php if(old('subcategory') == $subcategory->id): ?> selected <?php endif; ?>><?php echo e($subcategory->name); ?></option>
-                        <?php endif; ?>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    
+                    <?php endif; ?>
                 </select>
             </div>
             <?php $__errorArgs = ['category'];
