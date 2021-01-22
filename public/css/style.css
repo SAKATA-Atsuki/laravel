@@ -2194,7 +2194,8 @@ label {
     margin-left: 20px;
 }
 
-/* admin/register.php -------------------------------------------------- */
+/* admin/member/register.php -------------------------------------------------- */
+
 .admin-register-header-button {
     color: black;
     border: solid 2px black;
@@ -2240,7 +2241,7 @@ label {
     cursor: pointer;
 }
 
-/* admin/check.php -------------------------------------------------- */
+/* admin/member/check.php -------------------------------------------------- */
 
 .admin-check-main {
     width: 430px;
@@ -2255,7 +2256,7 @@ label {
     margin-top: 45px;
 }
 
-/* admin/detail.php -------------------------------------------------- */
+/* admin/member/detail.php -------------------------------------------------- */
 
 .admin-member-detail-button {
     text-align: center;
@@ -2289,6 +2290,7 @@ label {
 }
 
 /* admin/category.php -------------------------------------------------- */
+
 .admin-category-main-result-top {
     display: flex;
     width: 650px;
@@ -2352,6 +2354,7 @@ label {
 .admin-category-main-result-main-category {
     text-align: center;
     width: 300px;
+    text-decoration: none;
     border-right: dotted 1px black;
 }
 
@@ -2379,4 +2382,33 @@ label {
     margin: 0 auto;
     border-top: solid 2px black;
     margin-top: -2px;
+}
+
+/* admin/category/register.php -------------------------------------------------- */
+
+.admin-category-register {
+    width: 625px;
+    margin: 50px auto;
+    font-size: 20px;
+}
+
+.admin-category-register-content {
+    display: flex;
+}
+
+.admin-category-register-content-left {
+    width: 190px;
+}
+
+.admin-category-register-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* admin/category/detail.php -------------------------------------------------- */
+
+.admin-category-detail-button {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }

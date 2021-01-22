@@ -14,10 +14,10 @@
         <div><a href="{{ route('admin') }}" class="admin-member-header-button">トップへ戻る</a></div>
     </div>
     <div class="admin-member-main">
-        <form action="{{ route('admin.member') }}" method="POST">
+        <form action="{{ route('admin.category') }}" method="POST">
             @csrf
             <div class="admin-member-main-join">
-                <a href="{{ route('admin.member.register') }}" class="admin-member-main-join-button">商品カテゴリ登録</a>
+                <a href="{{ route('admin.category.register') }}" class="admin-member-main-join-button">商品カテゴリ登録</a>
             </div>
             <div class="admin-member-main-search">
                 <div class="admin-member-main-search-1">
@@ -55,28 +55,28 @@
                     <span class="admin-category-main-result-top-edit">編集</span>
                     <span class="admin-category-main-result-top-detail">詳細</span>
                 </div>
-                @foreach ($categorys as $category)
+                @foreach ($categories as $category)
                     <div class="admin-category-main-result-main">
                         <span class="admin-category-main-result-main-id">{{ $category->id }}</span>
-                        <span class="admin-category-main-result-main-category">{{ $category->name }}</span>
+                        <a href="{{ route('admin.category.detail', ['id' => $category->id]) }}" class="admin-category-main-result-main-category">{{ $category->name }}</a>
                         <span class="admin-category-main-result-main-created_at">{{ $category->created_at }}</span>
-                        <a href="{{ route('admin.member.edit', ['id' => $category->id]) }}" class="admin-category-main-result-main-edit">編集</a>
-                        <a href="{{ route('admin.member.detail', ['id' => $category->id]) }}" class="admin-category-main-result-main-detail">詳細</a>
+                        <a href="{{ route('admin.category.edit', ['id' => $category->id]) }}" class="admin-category-main-result-main-edit">編集</a>
+                        <a href="{{ route('admin.category.detail', ['id' => $category->id]) }}" class="admin-category-main-result-main-detail">詳細</a>
                     </div>
                 @endforeach
                 <div class="admin-category-main-page">
-                    @if (count($categorys))
+                    @if (count($categories))
                         <div class="admin-member-main-page-content">
-                            @if ($categorys->onFirstPage())
+                            @if ($categories->onFirstPage())
                                 <span class="admin-member-main-page-left-off"></span>
                             @else
-                                <a href="{{ $categorys->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-prev">前へ＞</a>
-                                <a href="{{ $categorys->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-left-on">{{ $categorys->currentPage() - 1 }}</a>
+                                <a href="{{ $categories->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-prev">前へ＞</a>
+                                <a href="{{ $categories->appends(['order' => $order])->previousPageUrl() }}" class="admin-member-main-page-left-on">{{ $categories->currentPage() - 1 }}</a>
                             @endif
-                            <span class="admin-member-main-page-center">{{ $categorys->currentPage() }}</span>
-                            @if ($categorys->hasMorePages())
-                                <a href="{{ $categorys->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-right-on">{{ $categorys->currentPage() + 1 }}</a>
-                                <a href="{{ $categorys->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-next">次へ＞</a>
+                            <span class="admin-member-main-page-center">{{ $categories->currentPage() }}</span>
+                            @if ($categories->hasMorePages())
+                                <a href="{{ $categories->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-right-on">{{ $categories->currentPage() + 1 }}</a>
+                                <a href="{{ $categories->appends(['order' => $order])->nextPageUrl() }}" class="admin-member-main-page-next">次へ＞</a>
                             @else
                                 <span class="admin-member-main-page-right-off"></span>
                             @endif

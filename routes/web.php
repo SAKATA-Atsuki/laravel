@@ -70,22 +70,35 @@ Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypa
 Route::get('admin', 'AdminController@index')->name('admin')->middleware('auth:administer');
 
 // admin.member
-Route::get('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
-Route::post('admin/member', 'AdminController@memberIndex')->name('admin.member')->middleware('auth:administer');
+Route::get('admin/member', 'Admin\AdminMemberController@memberIndex')->name('admin.member')->middleware('auth:administer');
+Route::post('admin/member', 'Admin\AdminMemberController@memberIndex')->name('admin.member')->middleware('auth:administer');
 
-Route::get('admin/member/register', 'AdminController@getMemberRegister')->name('admin.member.register')->middleware('auth:administer');
-Route::post('admin/member/register', 'AdminController@postMemberRegister')->name('admin.member.register')->middleware('auth:administer');
-Route::get('admin/member/register/check', 'AdminController@memberRegisterCheck')->name('admin.member.register.check')->middleware('auth:administer');
-Route::post('admin/member/register/store', 'AdminController@memberRegisterStore')->name('admin.member.register.store')->middleware('auth:administer');
+Route::get('admin/member/register', 'Admin\AdminMemberController@getMemberRegister')->name('admin.member.register')->middleware('auth:administer');
+Route::post('admin/member/register', 'Admin\AdminMemberController@postMemberRegister')->name('admin.member.register')->middleware('auth:administer');
+Route::get('admin/member/register/check', 'Admin\AdminMemberController@memberRegisterCheck')->name('admin.member.register.check')->middleware('auth:administer');
+Route::post('admin/member/register/store', 'Admin\AdminMemberController@memberRegisterStore')->name('admin.member.register.store')->middleware('auth:administer');
 
-Route::get('admin/member/edit', 'AdminController@getMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
-Route::post('admin/member/edit', 'AdminController@postMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
-Route::get('admin/member/edit/check', 'AdminController@memberEditCheck')->name('admin.member.edit.check')->middleware('auth:administer');
-Route::post('admin/member/edit/store', 'AdminController@memberEditStore')->name('admin.member.edit.store')->middleware('auth:administer');
+Route::get('admin/member/edit', 'Admin\AdminMemberController@getMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
+Route::post('admin/member/edit', 'Admin\AdminMemberController@postMemberEdit')->name('admin.member.edit')->middleware('auth:administer');
+Route::get('admin/member/edit/check', 'Admin\AdminMemberController@memberEditCheck')->name('admin.member.edit.check')->middleware('auth:administer');
+Route::post('admin/member/edit/store', 'Admin\AdminMemberController@memberEditStore')->name('admin.member.edit.store')->middleware('auth:administer');
 
-Route::get('admin/member/detail', 'AdminController@memberDetail')->name('admin.member.detail')->middleware('auth:administer');
-Route::get('admin/member/detail/delete', 'AdminController@memberDetailDelete')->name('admin.member.detail.delete')->middleware('auth:administer');
+Route::get('admin/member/detail', 'Admin\AdminMemberController@memberDetail')->name('admin.member.detail')->middleware('auth:administer');
+Route::get('admin/member/detail/delete', 'Admin\AdminMemberController@memberDetailDelete')->name('admin.member.detail.delete')->middleware('auth:administer');
 
 // admin.category
-Route::get('admin/category', 'AdminController@categoryIndex')->name('admin.category')->middleware('auth:administer');
-Route::post('admin/category', 'AdminController@categoryIndex')->name('admin.category')->middleware('auth:administer');
+Route::get('admin/category', 'Admin\AdminCategoryController@categoryIndex')->name('admin.category')->middleware('auth:administer');
+Route::post('admin/category', 'Admin\AdminCategoryController@categoryIndex')->name('admin.category')->middleware('auth:administer');
+
+Route::get('admin/category/register', 'Admin\AdminCategoryController@getCategoryRegister')->name('admin.category.register')->middleware('auth:administer');
+Route::post('admin/category/register', 'Admin\AdminCategoryController@postCategoryRegister')->name('admin.category.register')->middleware('auth:administer');
+Route::get('admin/category/register/check', 'Admin\AdminCategoryController@categoryRegisterCheck')->name('admin.category.register.check')->middleware('auth:administer');
+Route::post('admin/category/register/store', 'Admin\AdminCategoryController@categoryRegisterStore')->name('admin.category.register.store')->middleware('auth:administer');
+
+Route::get('admin/category/edit', 'Admin\AdminCategoryController@getCategoryEdit')->name('admin.category.edit')->middleware('auth:administer');
+Route::post('admin/category/edit', 'Admin\AdminCategoryController@postCategoryEdit')->name('admin.category.edit')->middleware('auth:administer');
+Route::get('admin/category/edit/check', 'Admin\AdminCategoryController@categoryEditCheck')->name('admin.category.edit.check')->middleware('auth:administer');
+Route::post('admin/category/edit/store', 'Admin\AdminCategoryController@categoryEditStore')->name('admin.category.edit.store')->middleware('auth:administer');
+
+Route::get('admin/category/detail', 'Admin\AdminCategoryController@categoryDetail')->name('admin.category.detail')->middleware('auth:administer');
+Route::get('admin/category/detail/delete', 'Admin\AdminCategoryController@categoryDetailDelete')->name('admin.category.detail.delete')->middleware('auth:administer');
