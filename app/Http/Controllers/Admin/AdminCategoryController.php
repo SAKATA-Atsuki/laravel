@@ -24,7 +24,6 @@ class AdminCategoryController extends Controller
             $data['free'] = '';
         }
 
-
         if ($request->order) {
             $order = $request->order;
         } else {

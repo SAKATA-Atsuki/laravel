@@ -92,15 +92,7 @@
             <div class="product-list">
                 <img src="<?php echo e(asset('images/' . $result->image_1)); ?>" class="product-list-image">
                 <div class="product-list-right">
-                    <span class="product-list-category">
-                        <?php $__currentLoopData = config('master.category'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php if($result->product_category_id == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        ＞
-                        <?php $__currentLoopData = config('master.subcategory'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php if($result->product_subcategory_id == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </span>
+                    <span class="product-list-category"><?php echo e($result->getCategoryName()); ?>＞<?php echo e($result->getSubcategoryName()); ?></span>
                     <br><br>
                     <a href="<?php echo e(route('product.detail', ['page' => $page, 'id' => $result->id])); ?>" class="button-product-list-to-detail-1"><?php echo e($result->name); ?></a>
                     <div class="product-list-star">

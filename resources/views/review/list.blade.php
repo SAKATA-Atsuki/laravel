@@ -47,7 +47,7 @@
                     <div class="review-list-result">
                         <div class="review-list-result-content">
                             <div class="review-list-result-left">
-                                <span class="review-list-result-name">{{ $result->getNickname() }}さん</span>
+                                <span class="review-list-result-name">{{ $result->getMemberNickname() }}さん</span>
                             </div>
                             <div class="review-list-result-center">
                                 @if ($result->evaluation == 1)

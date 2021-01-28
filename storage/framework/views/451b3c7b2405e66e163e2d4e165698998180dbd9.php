@@ -18,17 +18,9 @@
         <?php $__currentLoopData = $reviews; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $review): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="product-list-bar"></div>
             <div class="product-list">
-                <img src="<?php echo e(asset('images/' . $review->getImage1())); ?>" class="product-list-image">
+                <img src="<?php echo e(asset('images/' . $review->getProductImage1())); ?>" class="product-list-image">
                 <div class="product-list-right">
-                    <span class="product-list-category">
-                        <?php $__currentLoopData = config('master.category'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php if($review->getProductCategoryId() == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        ＞
-                        <?php $__currentLoopData = config('master.subcategory'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php if($review->getSubProductCategoryId() == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </span>
+                    <span class="product-list-category"><?php echo e(App\Models\Product_category::find($review->getProductCategoryId())->name); ?>＞<?php echo e(App\Models\Product_subcategory::find($review->getProductSubcategoryId())->name); ?></span>
                     <br><br>
                     <span class="button-product-list-to-detail-1"><?php echo e($review->getName()); ?></span>
                     <div class="product-list-star">

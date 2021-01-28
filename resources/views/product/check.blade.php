@@ -19,15 +19,7 @@
         <br>
         <div class="product-check">
             <span class="product-check-left">商品カテゴリ</span>
-            <span class="product-check-right">
-                @foreach (config('master.category') as $index => $value)
-                    @if ($product['category'] == $index) {{ $value }} @endif
-                @endforeach
-                ＞
-                @foreach (config('master.subcategory') as $index => $value)
-                    @if ($product['subcategory'] == $index) {{ $value }} @endif
-                @endforeach
-            </span>
+            <span class="product-check-right">{{ $category->name }}＞{{ $subcategory->name }}</span>
         </div>
         <br>
         <div class="product-check">

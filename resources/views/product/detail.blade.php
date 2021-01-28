@@ -16,15 +16,7 @@
     </div>
     <br>
     <div class="product-detail">
-        <p>
-            @foreach (config('master.category') as $index => $value)
-                @if ($product->product_category_id == $index) {{ $value }} @endif
-            @endforeach
-            ＞
-            @foreach (config('master.subcategory') as $index => $value)
-                @if ($product->product_subcategory_id == $index) {{ $value }} @endif
-            @endforeach
-        </p>
+        <p>{{ $product->getCategoryName() }}＞{{ $product->getSubcategoryName() }}</p>
         <span class="product-detail-name">{{ $product->name }}</span>
         <span>更新日時：{{ $product->updated_at }}</span>
         <div class="product-detail-images">

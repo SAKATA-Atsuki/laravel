@@ -19,12 +19,12 @@ class Review extends Model
         return $this->belongsTo('App\Models\Product');
     }
 
-    public function getNickname()
+    public function getMemberNickname()
     {
         return $this->member->nickname;
     }
 
-    public function getImage1()
+    public function getProductImage1()
     {
         return $this->product->image_1;
     }
@@ -34,11 +34,11 @@ class Review extends Model
         return $this->product->product_category_id;
     }
     
-    public function getSubProductCategoryId()
+    public function getProductSubcategoryId()
     {
         return $this->product->product_subcategory_id;
     }
-    
+        
     public function getName()
     {
         return $this->product->name;

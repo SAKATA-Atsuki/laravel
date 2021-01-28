@@ -16,15 +16,7 @@
     </div>
     <br>
     <div class="product-detail">
-        <p>
-            <?php $__currentLoopData = config('master.category'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php if($product->product_category_id == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            ＞
-            <?php $__currentLoopData = config('master.subcategory'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php if($product->product_subcategory_id == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </p>
+        <p><?php echo e($product->getCategoryName()); ?>＞<?php echo e($product->getSubcategoryName()); ?></p>
         <span class="product-detail-name"><?php echo e($product->name); ?></span>
         <span>更新日時：<?php echo e($product->updated_at); ?></span>
         <div class="product-detail-images">

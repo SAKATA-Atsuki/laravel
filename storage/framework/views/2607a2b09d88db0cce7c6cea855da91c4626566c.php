@@ -19,15 +19,7 @@
         <br>
         <div class="product-check">
             <span class="product-check-left">商品カテゴリ</span>
-            <span class="product-check-right">
-                <?php $__currentLoopData = config('master.category'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php if($product['category'] == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                ＞
-                <?php $__currentLoopData = config('master.subcategory'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php if($product['subcategory'] == $index): ?> <?php echo e($value); ?> <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </span>
+            <span class="product-check-right"><?php echo e($category->name); ?>＞<?php echo e($subcategory->name); ?></span>
         </div>
         <br>
         <div class="product-check">

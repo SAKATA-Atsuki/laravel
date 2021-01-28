@@ -67,7 +67,7 @@ Route::get('mypage/review/delete', 'MypageController@reviewDeleteCheck')->name('
 Route::post('mypage/review/delete', 'MypageController@reviewDelete')->name('mypage.review.delete');
 
 // admin
-Route::get('admin', 'AdminController@index')->name('admin')->middleware('auth:administer');
+Route::get('admin', 'Admin\AdminController@index')->name('admin')->middleware('auth:administer');
 
 // admin.member
 Route::get('admin/member', 'Admin\AdminMemberController@memberIndex')->name('admin.member')->middleware('auth:administer');
@@ -102,3 +102,20 @@ Route::post('admin/category/edit/store', 'Admin\AdminCategoryController@category
 
 Route::get('admin/category/detail', 'Admin\AdminCategoryController@categoryDetail')->name('admin.category.detail')->middleware('auth:administer');
 Route::get('admin/category/detail/delete', 'Admin\AdminCategoryController@categoryDetailDelete')->name('admin.category.detail.delete')->middleware('auth:administer');
+
+// admin.product
+Route::get('admin/product', 'Admin\AdminProductController@productIndex')->name('admin.product')->middleware('auth:administer');
+Route::post('admin/product', 'Admin\AdminProductController@productIndex')->name('admin.product')->middleware('auth:administer');
+
+Route::get('admin/product/register', 'Admin\AdminProductController@getProductRegister')->name('admin.product.register')->middleware('auth:administer');
+Route::post('admin/product/register', 'Admin\AdminProductController@postProductRegister')->name('admin.product.register')->middleware('auth:administer');
+Route::get('admin/product/register/check', 'Admin\AdminProductController@productRegisterCheck')->name('admin.product.register.check')->middleware('auth:administer');
+Route::post('admin/product/register/store', 'Admin\AdminProductController@productRegisterStore')->name('admin.product.register.store')->middleware('auth:administer');
+
+Route::get('admin/product/edit', 'Admin\AdminProductController@getProductEdit')->name('admin.product.edit')->middleware('auth:administer');
+Route::post('admin/product/edit', 'Admin\AdminProductController@postProductEdit')->name('admin.product.edit')->middleware('auth:administer');
+Route::get('admin/product/edit/check', 'Admin\AdminProductController@productEditCheck')->name('admin.product.edit.check')->middleware('auth:administer');
+Route::post('admin/product/edit/store', 'Admin\AdminProductController@productEditStore')->name('admin.product.edit.store')->middleware('auth:administer');
+
+Route::get('admin/product/detail', 'Admin\AdminProductController@productDetail')->name('admin.product.detail')->middleware('auth:administer');
+Route::get('admin/product/detail/delete', 'Admin\AdminProductController@productDetailDelete')->name('admin.product.detail.delete')->middleware('auth:administer');

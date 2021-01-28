@@ -18,17 +18,9 @@
         @foreach ($reviews as $review)
             <div class="product-list-bar"></div>
             <div class="product-list">
-                <img src="{{ asset('images/' . $review->getImage1()) }}" class="product-list-image">
+                <img src="{{ asset('images/' . $review->getProductImage1()) }}" class="product-list-image">
                 <div class="product-list-right">
-                    <span class="product-list-category">
-                        @foreach (config('master.category') as $index => $value)
-                            @if ($review->getProductCategoryId() == $index) {{ $value }} @endif
-                        @endforeach
-                        ＞
-                        @foreach (config('master.subcategory') as $index => $value)
-                            @if ($review->getSubProductCategoryId() == $index) {{ $value }} @endif
-                        @endforeach
-                    </span>
+                    <span class="product-list-category">{{ App\Models\Product_category::find($review->getProductCategoryId())->name }}＞{{ App\Models\Product_subcategory::find($review->getProductSubcategoryId())->name }}</span>
                     <br><br>
                     <span class="button-product-list-to-detail-1">{{ $review->getName() }}</span>
                     <div class="product-list-star">

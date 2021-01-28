@@ -92,15 +92,7 @@
             <div class="product-list">
                 <img src="{{ asset('images/' . $result->image_1) }}" class="product-list-image">
                 <div class="product-list-right">
-                    <span class="product-list-category">
-                        @foreach (config('master.category') as $index => $value)
-                            @if ($result->product_category_id == $index) {{ $value }} @endif
-                        @endforeach
-                        ＞
-                        @foreach (config('master.subcategory') as $index => $value)
-                            @if ($result->product_subcategory_id == $index) {{ $value }} @endif
-                        @endforeach
-                    </span>
+                    <span class="product-list-category">{{ $result->getCategoryName() }}＞{{ $result->getSubcategoryName() }}</span>
                     <br><br>
                     <a href="{{ route('product.detail', ['page' => $page, 'id' => $result->id]) }}" class="button-product-list-to-detail-1">{{ $result->name }}</a>
                     <div class="product-list-star">

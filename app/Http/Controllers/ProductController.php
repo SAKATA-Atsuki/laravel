@@ -74,7 +74,10 @@ class ProductController extends Controller
         $product = $request->all();
         $product = $request->except(['product-register-image-upload-1', 'product-register-image-upload-2', 'product-register-image-upload-3', 'product-register-image-upload-4']);
         $request->session()->put('product', $product);
-        return view('product.check', compact('product'));
+        $category = Product_category::find($request->category);
+        $subcategory = Product_subcategory::find($request->subcategory);
+
+        return view('product.check', compact('product', 'category', 'subcategory'));
     }
 
     public function store(Request $request)

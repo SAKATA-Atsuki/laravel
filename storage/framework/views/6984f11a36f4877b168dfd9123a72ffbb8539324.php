@@ -19,6 +19,8 @@
         <a href="<?php echo e(route('admin.member')); ?>" class="admin-index-main-member">会員一覧</a>
         <p>　</p>
         <a href="<?php echo e(route('admin.category')); ?>" class="admin-index-main-category">商品カテゴリ一覧</a>
+        <p>　</p>
+        <a href="<?php echo e(route('admin.product')); ?>" class="admin-index-main-member">商品一覧</a>
     </div>
 </body>
 </html><?php /**PATH /Applications/MAMP/htdocs/laravelbbs/resources/views/admin/index.blade.php ENDPATH**/ ?>

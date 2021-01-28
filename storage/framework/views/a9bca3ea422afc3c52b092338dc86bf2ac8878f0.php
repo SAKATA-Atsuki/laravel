@@ -47,7 +47,7 @@
                     <div class="review-list-result">
                         <div class="review-list-result-content">
                             <div class="review-list-result-left">
-                                <span class="review-list-result-name"><?php echo e($result->getNickname()); ?>さん</span>
+                                <span class="review-list-result-name"><?php echo e($result->getMemberNickname()); ?>さん</span>
                             </div>
                             <div class="review-list-result-center">
                                 <?php if($result->evaluation == 1): ?>
