@@ -95,7 +95,7 @@
     @foreach ($reviews as $review)
         <div class="admin-product-detail-reviews">
             <div class="admin-product-detail-review">
-                <span class="admin-product-detail-review-id">商品レビューID　{{ $review->id }}</span>
+                <span class="admin-product-detail-review-id">商品レビューID　　{{ $review->id }}</span>
             </div>
             <div class="admin-product-detail-review">
                 <a href="{{ route('admin.member.detail', ['id' => $review->member_id]) }}" class="admin-product-detail-review-name">{{ $review->getMemberNickname() }}さん</a>
@@ -123,7 +123,7 @@
             </div>
             <div class="admin-product-detail-review">
                 <span class="admin-product-detail-review-comment">商品コメント</span>
-                <span style="width: 280px;">{{ $review->comment }}</span>
+                <span style="width: 450px;">{{ $review->comment }}</span>
                 <a href="" class="admin-product-detail-review-detail">商品レビュー詳細</a>
             </div>
         </div>

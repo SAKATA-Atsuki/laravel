@@ -2463,7 +2463,7 @@ label {
 }
 
 .admin-product-detail-reviews {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     padding: 0 50px;
     border-bottom: solid 1px black;
@@ -2481,12 +2481,12 @@ label {
 
 .admin-product-detail-review-name {
     text-decoration: none;
-    width: 140px;
+    width: 165px;
 }
 
 .admin-product-detail-review-comment {
     font-weight: bold;
-    width: 140px;
+    width: 165px;
 }
 
 .admin-product-detail-review-detail {
@@ -2498,7 +2498,7 @@ label {
 }
 
 .admin-product-detail-page {
-    width: 700px;
+    width: 900px;
     margin: 0 auto;
     margin-top: 25px;
 }
