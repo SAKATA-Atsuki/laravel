@@ -1137,9 +1137,6 @@ label {
     width: 130px;
 }
 
-.review-register-review-right {
-}
-
 .review-register-evaluation {
     width: 100px;
 }
@@ -1254,9 +1251,6 @@ label {
     display: flex;
     border-bottom: solid 1px black;
     padding-bottom: 20px;
-}
-
-.review-list-results {
 }
 
 .review-list-result {
@@ -2512,4 +2506,181 @@ label {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 50px;
+}
+
+/* admin/review.php -------------------------------------------------- */
+
+.admin-review-main-result-top {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 1px black;
+}
+
+.admin-review-main-result-top-id {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-product_id {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-evaluation {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-comment {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 150px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-created_at {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 200px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-edit {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-top-detail {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    width: 50px;
+}
+
+.admin-review-main-result-main {
+    background-color: white;
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: dotted 1px black;
+}
+
+.admin-review-main-result-main-id {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-product_id {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-evaluation {
+    text-align: center;
+    width: 50px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-comment {
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-created_at {
+    text-align: center;
+    width: 200px;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-edit {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+    border-right: dotted 1px black;
+}
+
+.admin-review-main-result-main-detail {
+    text-align: center;
+    width: 50px;
+    text-decoration: none;
+}
+
+.admin-review-main-page {
+    width: 604px;
+    margin: 0 auto;
+    border-top: solid 2px black;
+    margin-top: -2px;
+}
+
+/* admin/review/register.php -------------------------------------------------- */
+
+.admin-review-register-product {
+    width: 100px;
+}
+
+.button-admin-review-register {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* admin/review/register/check.php -------------------------------------------------- */
+
+.review-register-check-review-left {
+    font-weight: bold;
+    width: 130px;
+}
+
+.button-admin-review-register-check-1 {
+    outline: none;
+    background: none;
+    color: white;
+    background-color: rgb(68, 114, 196);
+    border-color: rgb(47, 82, 143);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.button-admin-review-register-check-2 {
+    outline: none;
+    background: none;
+    color: rgb(48, 85, 152);
+    background-color: white;
+    border-color: rgb(68, 114, 196);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 9px 60px;
+    border-radius: 10px;
+    cursor: pointer;
 }

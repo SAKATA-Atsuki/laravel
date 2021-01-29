@@ -21,6 +21,8 @@
         <a href="{{ route('admin.category') }}" class="admin-index-main-category">商品カテゴリ一覧</a>
         <p>　</p>
         <a href="{{ route('admin.product') }}" class="admin-index-main-member">商品一覧</a>
+        <p>　</p>
+        <a href="{{ route('admin.review') }}" class="admin-index-main-category">商品レビュー一覧</a>
     </div>
 </body>
 </html>

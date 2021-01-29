@@ -119,3 +119,20 @@ Route::post('admin/product/edit/store', 'Admin\AdminProductController@productEdi
 
 Route::get('admin/product/detail', 'Admin\AdminProductController@productDetail')->name('admin.product.detail')->middleware('auth:administer');
 Route::get('admin/product/detail/delete', 'Admin\AdminProductController@productDetailDelete')->name('admin.product.detail.delete')->middleware('auth:administer');
+
+// admin.review
+Route::get('admin/review', 'Admin\AdminReviewController@reviewIndex')->name('admin.review')->middleware('auth:administer');
+Route::post('admin/review', 'Admin\AdminReviewController@reviewIndex')->name('admin.review')->middleware('auth:administer');
+
+Route::get('admin/review/register', 'Admin\AdminReviewController@getReviewRegister')->name('admin.review.register')->middleware('auth:administer');
+Route::post('admin/review/register', 'Admin\AdminReviewController@postReviewRegister')->name('admin.review.register')->middleware('auth:administer');
+Route::get('admin/review/register/check', 'Admin\AdminReviewController@reviewRegisterCheck')->name('admin.review.register.check')->middleware('auth:administer');
+Route::post('admin/review/register/store', 'Admin\AdminReviewController@reviewRegisterStore')->name('admin.review.register.store')->middleware('auth:administer');
+
+Route::get('admin/review/edit', 'Admin\AdminReviewController@getReviewEdit')->name('admin.review.edit')->middleware('auth:administer');
+Route::post('admin/review/edit', 'Admin\AdminReviewController@postReviewEdit')->name('admin.review.edit')->middleware('auth:administer');
+Route::get('admin/review/edit/check', 'Admin\AdminReviewController@reviewEditCheck')->name('admin.review.edit.check')->middleware('auth:administer');
+Route::post('admin/review/edit/store', 'Admin\AdminReviewController@reviewEditStore')->name('admin.review.edit.store')->middleware('auth:administer');
+
+Route::get('admin/review/detail', 'Admin\AdminReviewController@reviewDetail')->name('admin.review.detail')->middleware('auth:administer');
+Route::get('admin/review/detail/delete', 'Admin\AdminReviewController@reviewDetailDelete')->name('admin.review.detail.delete')->middleware('auth:administer');

@@ -124,7 +124,7 @@
             <div class="admin-product-detail-review">
                 <span class="admin-product-detail-review-comment">商品コメント</span>
                 <span style="width: 450px;">{{ $review->comment }}</span>
-                <a href="" class="admin-product-detail-review-detail">商品レビュー詳細</a>
+                <a href="{{ route('admin.review.detail', ['id' => $review->id]) }}" class="admin-product-detail-review-detail">商品レビュー詳細</a>
             </div>
         </div>
     @endforeach
