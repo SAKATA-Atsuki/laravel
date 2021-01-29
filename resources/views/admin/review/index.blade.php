@@ -11,7 +11,7 @@
 <body id="admin">
     <div class="admin-index-header">
         <span class="admin-title">商品レビュー一覧</span>
-        <div><a href="{{ route('admin.review') }}" class="admin-register-header-button">一覧へ戻る</a></div>
+        <div><a href="{{ route('admin') }}" class="admin-member-header-button">トップへ戻る</a></div>
     </div>
     <div class="admin-member-main">
         <form action="{{ route('admin.review') }}" method="POST">
